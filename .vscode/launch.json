@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-msedge",
+            "name": "Abrir Portal Estudiantil",
+            "request": "launch",
+            "url": "file:///c:/Users/vakano10/Documents/repo comfainteraciones/portal estudiantil/index.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "pwa-chrome",
+            "name": "Abrir en Chrome",
+            "request": "launch",
+            "url": "file:///c:/Users/vakano10/Documents/repo comfainteraciones/portal estudiantil/index.html",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
