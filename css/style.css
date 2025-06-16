@@ -1153,7 +1153,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-footer {
-  background: #efefef;
+  background: #e0e0e0;
 }
 #fh5co-footer .fh5co-footer-links {
   padding: 0;
@@ -1624,6 +1624,76 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .js .animate-box {
   opacity: 0;
+}
+
+/* Diseño para la sección de contacto y mapa en el footer */
+.contacto-mapa-footer {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 30px 34px;
+  background: #ededed;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.contacto-footer {
+  flex: 1 1 300px;
+  min-width: 260px;
+  color: #333;
+}
+
+.contacto-footer h4 {
+  color: #00833e;
+  margin-bottom: 15px;
+}
+
+.contacto-footer p {
+  margin: 5px 0;
+}
+
+.contacto-legales {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.contacto-legales a {
+  color: #f89c1c;
+  word-break: break-all;
+}
+
+.mapa-footer {
+  flex: 1 1 320px;
+  min-width: 260px;
+  display: flex;
+  align-items: center;
+}
+
+.mapa-footer iframe {
+  width: 100%;
+  height: 200px;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* Responsive para móvil */
+@media (max-width: 800px) {
+  .contacto-mapa-footer {
+    flex-direction: column;
+    padding: 16px 8px;
+    gap: 16px;
+  }
+  .mapa-footer {
+    width: 100%;
+  }
+  .mapa-footer iframe {
+    height: 180px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
