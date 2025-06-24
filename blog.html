@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Learn &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+	<title>Confainteracciones</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -71,7 +71,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-right">
-						<p class="num">Call: +01 123 456 7890</p>
+						<p class="num">Contactanos: +01 123 456 7890</p>
 						<ul class="fh5co-social">
 							<li><a href="#"><i class="icon-twitter"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
@@ -85,7 +85,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-1">
-						<div id="fh5co-logo"><a href="index.html">Learn<span>.</span></a></div>
+						<div id="fh5co-logo"><a href="index.html">Confainteracciones<span>.</span></a></div>
 					</div>
 					<div class="col-xs-11 text-right menu-1">
 						<ul>
@@ -95,15 +95,15 @@
 							<li class="has-dropdown active">
 								<a href="blog.html">Blog</a>
 								<ul class="dropdown">
-									<li><a href="#">Web Design</a></li>
-									<li><a href="#">eCommerce</a></li>
-									<li><a href="#">Branding</a></li>
+									<li><a href="#">Tus Apuntes</a></li>
+									<li><a href="#">Calendario</a></li>
+									<li><a href="#">Noticias</a></li>
 									<li><a href="#">API</a></li>
 								</ul>
 							</li>
 							<li><a href="contacto.html">Contacto</a></li>
 							<li class="btn-cta"><a href="#"><span>Ingresa</span></a></li>
-							<li class="btn-cta"><a href="#"><span>Crea un Blog</span></a></li>
+							<li class="btn-cta"><a href="#"><span>Crea tus Blog</span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -120,13 +120,111 @@
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>Blog</h1>
-							<h2>Free html5 templates Made by <a href="http://freehtml5.co" target="_blank">freehtml5.co</a></h2>
+							<h2>Un cierre emotivo y personal que hace sentir al <a href="http://freehtml5.co" target="_blank">estudiante </a> que su éxito importa</h2>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</header>
+
+	<!-- Sección de Apuntes para Estudiantes -->
+	<div id="fh5co-notes">
+		<div class="container">
+			<!-- Título destacado con diseño especial -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="notes-title-section">
+						<div class="notes-title-container">
+							<div class="notes-icon">
+								<i class="icon-edit"></i>
+							</div>
+							<div class="notes-title-content">
+								<h2>Mis Apuntes</h2>
+								<p>Toma notas mientras estudias y organízalas por temas</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="notes-container">
+						<!-- Barra de herramientas -->
+						<div class="notes-toolbar">
+							<div class="col-md-8">
+								<input type="text" class="form-control note-title" placeholder="Título de tu apunte...">
+							</div>
+							<div class="col-md-4">
+								<select class="form-control note-category">
+									<option value="">Seleccionar categoría</option>
+									<option value="matematicas">Matemáticas</option>
+									<option value="ciencias">Ciencias</option>
+									<option value="historia">Historia</option>
+									<option value="idiomas">Idiomas</option>
+									<option value="otros">Otros</option>
+								</select>
+							</div>
+						</div>
+						
+						<!-- Editor de notas -->
+						<div class="notes-editor">
+							<div class="editor-toolbar">
+								<button type="button" class="btn-editor" data-action="bold"><i class="icon-bold"></i></button>
+								<button type="button" class="btn-editor" data-action="italic"><i class="icon-italic"></i></button>
+								<button type="button" class="btn-editor" data-action="underline"><i class="icon-underline"></i></button>
+								<button type="button" class="btn-editor" data-action="heading"><i class="icon-header"></i></button>
+								<button type="button" class="btn-editor" data-action="list"><i class="icon-list"></i></button>
+							</div>
+							<textarea class="form-control note-content" rows="8" placeholder="Escribe tus apuntes aquí..."></textarea>
+						</div>
+						
+						<!-- Botones de acción -->
+						<div class="notes-actions">
+							<button type="button" class="btn btn-primary save-note">Guardar Apunte</button>
+							<button type="button" class="btn btn-default clear-note">Limpiar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Lista de apuntes guardados -->
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="saved-notes">
+						<h3>Apuntes Guardados</h3>
+						<div class="notes-filter">
+							<select class="form-control filter-category">
+								<option value="">Todas las categorías</option>
+								<option value="matematicas">Matemáticas</option>
+								<option value="ciencias">Ciencias</option>
+								<option value="historia">Historia</option>
+								<option value="idiomas">Idiomas</option>
+								<option value="otros">Otros</option>
+							</select>
+						</div>
+						<div class="notes-list">
+							<!-- Las notas se cargarán dinámicamente aquí -->
+							<div class="note-item sample-note">
+								<div class="note-header">
+									<h4>Ejemplo de Apunte</h4>
+									<span class="note-category matematicas">Matemáticas</span>
+									<span class="note-date">24 Jun 2025</span>
+								</div>
+								<div class="note-preview">
+									<p>Este es un ejemplo de cómo se verán tus apuntes guardados...</p>
+								</div>
+								<div class="note-actions">
+									<button class="btn-edit"><i class="icon-edit"></i> Editar</button>
+									<button class="btn-delete"><i class="icon-trash"></i> Eliminar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div id="fh5co-blog">
 		<div class="container">
@@ -320,6 +418,8 @@
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	<!-- Notes functionality -->
+	<script src="js/notes.js"></script>
 
 	</body>
 </html>
