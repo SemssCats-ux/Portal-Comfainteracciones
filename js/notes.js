@@ -300,3 +300,166 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Variables globales para el filtro
+let currentFilter = 'all';
+let isFilterMenuOpen = false;
+
+// Función para manejar el dropdown de filtros
+function toggleFilterDropdown() {
+    const filterMenu = document.querySelector('.filter-menu');
+    const filterBtn = document.querySelector('.filter-btn');
+    
+    if (!filterMenu || !filterBtn) return;
+    
+    isFilterMenuOpen = !isFilterMenuOpen;
+    
+    if (isFilterMenuOpen) {
+        filterMenu.style.display = 'block';
+        filterBtn.classList.add('active');
+        
+        // Marcar la opción actual como seleccionada
+        updateSelectedOption();
+        
+        // Agregar listener para cerrar al hacer click fuera
+        setTimeout(() => {
+            document.addEventListener('click', closeFilterOnClickOutside);
+        }, 0);
+    } else {
+        filterMenu.style.display = 'none';
+        filterBtn.classList.remove('active');
+        document.removeEventListener('click', closeFilterOnClickOutside);
+    }
+}
+
+// Función para cerrar el dropdown al hacer click fuera
+function closeFilterOnClickOutside(event) {
+    const filterDropdown = document.querySelector('.filter-dropdown');
+    
+    if (!filterDropdown.contains(event.target)) {
+        const filterMenu = document.querySelector('.filter-menu');
+        const filterBtn = document.querySelector('.filter-btn');
+        
+        if (filterMenu && filterBtn) {
+            filterMenu.style.display = 'none';
+            filterBtn.classList.remove('active');
+            isFilterMenuOpen = false;
+        }
+        
+        document.removeEventListener('click', closeFilterOnClickOutside);
+    }
+}
+
+// Función para aplicar un filtro específico
+function applyFilter(category) {
+    currentFilter = category;
+    
+    // Cerrar el dropdown
+    const filterMenu = document.querySelector('.filter-menu');
+    const filterBtn = document.querySelector('.filter-btn');
+    
+    if (filterMenu && filterBtn) {
+        filterMenu.style.display = 'none';
+        filterBtn.classList.remove('active');
+        isFilterMenuOpen = false;
+    }
+    
+    // Actualizar el texto del botón
+    updateFilterButtonText(category);
+    
+    // Aplicar el filtro
+    filterNotesByCategory(category);
+    
+    // Remover el listener de click fuera
+    document.removeEventListener('click', closeFilterOnClickOutside);
+}
+
+// Función para actualizar el texto del botón según el filtro
+function updateFilterButtonText(category) {
+    const filterBtn = document.querySelector('.filter-btn');
+    if (!filterBtn) return;
+    
+    const categoryNames = {
+        'all': '<i class="icon-funnel"></i> Filtrar',
+        'matematicas': '<i class="icon-calculator"></i> Matemáticas',
+        'ciencias': '<i class="icon-flask"></i> Ciencias',
+        'historia': '<i class="icon-book"></i> Historia',
+        'idiomas': '<i class="icon-globe"></i> Idiomas',
+        'otros': '<i class="icon-folder"></i> Otros'
+    };
+    
+    filterBtn.innerHTML = categoryNames[category] || '<i class="icon-funnel"></i> Filtrar';
+}
+
+// Función para marcar la opción seleccionada
+function updateSelectedOption() {
+    const options = document.querySelectorAll('.filter-option');
+    
+    options.forEach(option => {
+        option.classList.remove('selected');
+        
+        const onclick = option.getAttribute('onclick');
+        if (onclick && onclick.includes(`'${currentFilter}'`)) {
+            option.classList.add('selected');
+        }
+    });
+}
+
+// Función para filtrar notas por categoría
+function filterNotesByCategory(category) {
+    const noteItems = document.querySelectorAll('.note-item:not(.sample-note)');
+    let visibleCount = 0;
+    
+    // Remover mensaje de filtro anterior
+    removeFilterMessage();
+    
+    noteItems.forEach(item => {
+        const categoryElement = item.querySelector('.note-category');
+        
+        if (category === 'all') {
+            item.style.display = 'block';
+            visibleCount++;
+        } else if (categoryElement && categoryElement.classList.contains(category)) {
+            item.style.display = 'block';
+            visibleCount++;
+        } else {
+            item.style.display = 'none';
+        }
+    });
+    
+    // Mostrar mensaje si no hay notas en la categoría seleccionada
+    if (visibleCount === 0 && category !== 'all') {
+        const categoryNames = {
+            'matematicas': 'Matemáticas',
+            'ciencias': 'Ciencias',
+            'historia': 'Historia',
+            'idiomas': 'Idiomas',
+            'otros': 'Otros'
+        };
+        
+        showFilterMessage(`No hay notas en la categoría: ${categoryNames[category]}`);
+    }
+}
+
+// Función auxiliar para mostrar mensaje de filtro
+function showFilterMessage(message) {
+    removeFilterMessage(); // Remover mensaje anterior si existe
+    
+    const notesList = document.querySelector('.notes-list');
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'filter-message';
+    messageDiv.innerHTML = `
+        <div style="text-align: center; padding: 20px; color: #666; font-style: italic;">
+            <i class="icon-info"></i> ${message}
+        </div>
+    `;
+    notesList.appendChild(messageDiv);
+}
+
+// Función auxiliar para remover mensaje de filtro
+function removeFilterMessage() {
+    const existingMessage = document.querySelector('.filter-message');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+}

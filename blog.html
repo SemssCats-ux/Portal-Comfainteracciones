@@ -147,78 +147,109 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-10 col-md-offset-1">
-					<div class="notes-container">
-						<!-- Barra de herramientas -->
-						<div class="notes-toolbar">
-							<div class="row">
-								<div class="col-md-8">
-									<input type="text" class="form-control note-title" placeholder="Título de tu apunte...">
-								</div>
-								<div class="col-md-4">
-									<select class="form-control note-category">
-										<option value="">Seleccionar categoría</option>
-										<option value="matematicas">Matemáticas</option>
-										<option value="ciencias">Ciencias</option>
-										<option value="historia">Historia</option>
-										<option value="idiomas">Idiomas</option>
-										<option value="otros">Otros</option>
-									</select>
+			<div class="notes-content-wrapper">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="notes-container">
+							<!-- Barra de herramientas -->
+							<div class="notes-toolbar">
+								<div class="row">
+									<div class="col-md-8">
+										<input type="text" class="form-control note-title" placeholder="Título de tu apunte...">
+									</div>
+									<div class="col-md-4">
+										<select class="form-control note-category">
+											<option value="">Seleccionar categoría</option>
+											<option value="matematicas">Matemáticas</option>
+											<option value="ciencias">Ciencias</option>
+											<option value="historia">Historia</option>
+											<option value="idiomas">Idiomas</option>
+											<option value="otros">Otros</option>
+										</select>
+									</div>
 								</div>
 							</div>
-						</div>
-						
-						<!-- Editor de notas -->
-						<div class="notes-editor">
-							<div class="editor-toolbar">
-								<button type="button" class="btn-editor" data-action="bold"><i class="icon-bold"></i></button>
-								<button type="button" class="btn-editor" data-action="italic"><i class="icon-italic"></i></button>
-								<button type="button" class="btn-editor" data-action="underline"><i class="icon-underline"></i></button>
-								<button type="button" class="btn-editor" data-action="heading"><i class="icon-header"></i></button>
-								<button type="button" class="btn-editor" data-action="list"><i class="icon-list"></i></button>
+							
+							<!-- Editor de notas -->
+							<div class="notes-editor">
+								<div class="editor-toolbar">
+									<button type="button" class="btn-editor" data-action="bold"><i class="icon-bold"></i></button>
+									<button type="button" class="btn-editor" data-action="italic"><i class="icon-italic"></i></button>
+									<button type="button" class="btn-editor" data-action="underline"><i class="icon-underline"></i></button>
+									<button type="button" class="btn-editor" data-action="heading"><i class="icon-header"></i></button>
+									<button type="button" class="btn-editor" data-action="list"><i class="icon-list"></i></button>
+								</div>
+								<textarea class="form-control note-content" rows="8" placeholder="Escribe tus apuntes aquí..."></textarea>
 							</div>
-							<textarea class="form-control note-content" rows="8" placeholder="Escribe tus apuntes aquí..."></textarea>
-						</div>
-						
-						<!-- Botones de acción -->
-						<div class="notes-actions">
-							<button type="button" class="btn btn-primary save-note">Guardar Apunte</button>
-							<button type="button" class="btn btn-default clear-note">Limpiar</button>
+							
+							<!-- Botones de acción -->
+							<div class="notes-actions">
+								<button type="button" class="btn btn-primary save-note">Guardar Apunte</button>
+								<button type="button" class="btn btn-default clear-note">Limpiar</button>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			
-			<!-- Lista de apuntes guardados -->
-			<div class="row">
-				<div class="col-md-10 col-md-offset-1">
-					<div class="saved-notes">
-						<h3>Apuntes Guardados</h3>
-						<div class="notes-filter">
-							<select class="form-control filter-category">
-								<option value="">Todas las categorías</option>
-								<option value="matematicas">Matemáticas</option>
-								<option value="ciencias">Ciencias</option>
-								<option value="historia">Historia</option>
-								<option value="idiomas">Idiomas</option>
-								<option value="otros">Otros</option>
-							</select>
-						</div>
-						<div class="notes-list">
-							<!-- Las notas se cargarán dinámicamente aquí -->
-							<div class="note-item sample-note">
-								<div class="note-header">
-									<h4>Ejemplo de Apunte</h4>
-									<span class="note-category matematicas">Matemáticas</span>
-									<span class="note-date">24 Jun 2025</span>
+					
+					<!-- Lista de apuntes guardados - Columna derehcha -->
+					<div class="col-md-4">
+						<div class="saved-notes">
+							<div class="notes-header">
+								<h3>Apuntes Guardados</h3>
+								<div class="filter-dropdown">
+									<button class="filter-btn" onclick="toggleFilterDropdown()">
+										<i class="icon-funnel"></i> Filtrar
+									</button>
+									<div class="filter-menu" style="display: none;">
+										<div class="filter-option" onclick="applyFilter('all')">
+											<i class="icon-list"></i> Todas las categorías
+										</div>
+										<div class="filter-option" onclick="applyFilter('matematicas')">
+											<i class="icon-calculator"></i> Matemáticas
+										</div>
+										<div class="filter-option" onclick="applyFilter('ciencias')">
+											<i class="icon-flask"></i> Ciencias
+										</div>
+										<div class="filter-option" onclick="applyFilter('historia')">
+											<i class="icon-book"></i> Historia
+										</div>
+										<div class="filter-option" onclick="applyFilter('idiomas')">
+											<i class="icon-globe"></i> Idiomas
+										</div>
+										<div class="filter-option" onclick="applyFilter('otros')">
+											<i class="icon-folder"></i> Otros
+										</div>
+									</div>
 								</div>
-								<div class="note-preview">
-									<p>Este es un ejemplo de cómo se verán tus apuntes guardados...</p>
+							</div>
+							<div class="notes-list">
+								<!-- Las notas se cargarán dinámicamente aquí -->
+								<div class="note-item sample-note">
+									<div class="note-header">
+										<h4>Geometria</h4>
+										<span class="note-category idiomas">Idiomas</span>
+										<span class="note-date">25 Jun 2025</span>
+									</div>
+									<div class="note-preview">
+										<p>Este es de geometria</p>
+									</div>
+									<div class="note-actions">
+										<button class="btn-edit"><i class="icon-edit"></i> Editar</button>
+										<button class="btn-delete"><i class="icon-trash"></i> Eliminar</button>
+									</div>
 								</div>
-								<div class="note-actions">
-									<button class="btn-edit"><i class="icon-edit"></i> Editar</button>
-									<button class="btn-delete"><i class="icon-trash"></i> Eliminar</button>
+								<div class="note-item sample-note">
+									<div class="note-header">
+										<h4>Matematicas</h4>
+										<span class="note-category matematicas">Matemáticas</span>
+										<span class="note-date">25 Jun 2025</span>
+									</div>
+									<div class="note-preview">
+										<p>Mi primer apunte sobre la clase de matematicas</p>
+									</div>
+									<div class="note-actions">
+										<button class="btn-edit"><i class="icon-edit"></i> Editar</button>
+										<button class="btn-delete"><i class="icon-trash"></i> Eliminar</button>
+									</div>
 								</div>
 							</div>
 						</div>
