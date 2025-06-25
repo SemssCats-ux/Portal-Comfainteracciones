@@ -1971,21 +1971,20 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .filter-btn {
-	border: 1px solid #dadce0;
-	border-radius: 6px;
-	padding: 6px 10px;
-	transition: all 0.3s ease;
-	background: #ffffff;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-	font-size: 12px;
-	font-weight: 500;
-	color: #5f6368;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	gap: 4px;
+    border: 1px solid #dadce0;
+    border-radius: 6px;
+    padding: 10px 16px;
+    transition: all 0.3s ease;
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    font-size: 14px;
+    font-weight: 500;
+    color: #5f6368;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
-
 .filter-btn:focus {
 	border-color: #9aa0a6;
 	box-shadow: 
@@ -2633,7 +2632,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	
 	/* Mejorar el espaciado entre el filtro y el primer apunte */
 	.note-item:first-child {
-		margin-top: 20px;
+		margin-top: 11px;
 	}
 	
 	/* Ajustar el contenedor principal de apuntes guardados */
