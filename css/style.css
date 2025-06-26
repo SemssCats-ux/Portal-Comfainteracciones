@@ -233,7 +233,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -1934,7 +1934,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	padding: 40px;
 	/* border: 1px solid #ffffff; */
 	position: relative;
-	overflow: hidden;
+	overflow: visible;
 }
 
 .saved-notes::before {
@@ -1956,18 +1956,6 @@ h1, h2, h3, h4, h5, h6, figure {
 	text-align: center;
 	position: relative;
 	padding-bottom: 15px;
-}
-
-.saved-notes h3::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 100px;
-	height: 2px;
-	background: linear-gradient(90deg, #28a745, #17a2b8);
-	border-radius: 2px;
 }
 
 .filter-btn {
@@ -2023,7 +2011,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	border: 1px solid #dadce0;
 	border-radius: 8px;
 	box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-	z-index: 1000;
+	z-index: 9999;
 	min-width: 180px;
 	margin-top: 4px;
 	max-width: calc(100vw - 40px);
@@ -2685,7 +2673,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	padding: 0;
 	margin: none;
 	box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-	overflow: hidden;
+	overflow: visible;
 	scroll-behavior: smooth;
 }
 
@@ -2702,7 +2690,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	gap: 15px;
 	min-height: 60px;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-	overflow: hidden;
+	overflow: visible;
 }
 
 .notes-header h3 {
