@@ -1926,13 +1926,13 @@ h1, h2, h3, h4, h5, h6, figure {
 
 /* Apuntes Guardados */
 .saved-notes {
-	background: linear-gradient(145deg, #ffffff 0%, #fafbfc 100%);
+	/* background: linear-gradient(145deg, #ffffff 0%, #fafbfc 100%); */
 	border-radius: 20px;
-	box-shadow: 
+	/* box-shadow: 
 		0 10px 30px rgba(0,0,0,0.08),
-		0 2px 8px rgba(0,0,0,0.04);
+		0 2px 8px rgba(0,0,0,0.04); */
 	padding: 40px;
-	border: 1px solid #e9ecef;
+	/* border: 1px solid #ffffff; */
 	position: relative;
 	overflow: hidden;
 }
@@ -2326,7 +2326,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	margin-bottom: 50px;
 	padding: 0;
 	overflow: hidden;
-	border: 1px solid #dee2e6;
+	border: 15px solid #dee2e6;
 }
 
 .notes-title-section::before {
@@ -2638,7 +2638,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	/* Ajustar el contenedor principal de apuntes guardados */
 	.saved-notes {
 		position: relative;
-		border-radius: 12px;
+		border-radius: 28px;
 		overflow: hidden;
 	}
 	
@@ -2678,7 +2678,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	background: #ffffff;
 	border-radius: 15px;
 	padding: 0;
-	margin: 20px 0;
+	margin: none;
 	box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 	overflow: hidden;
 	scroll-behavior: smooth;
@@ -2686,9 +2686,9 @@ h1, h2, h3, h4, h5, h6, figure {
 
 /* Barra unificada de título y filtro */
 .notes-header {
-	background: linear-gradient(135deg, #f1f3f4 0%, #e8eaed 100%);
+	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 	border-radius: 15px 15px 0 0;
-	border-bottom: 1px solid #dadce0;
+	border-bottom: 1px solid #e0dada;
 	padding: 15px 20px;
 	display: flex;
 	justify-content: space-between;
@@ -2696,10 +2696,13 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .notes-header h3 {
-	color: #5f6368;
+  background: transparent;
+	color: #302e2e;
 	margin: 0;
 	font-weight: 600;
 	font-size: 16px;
+  border-bottom: none;
+  box-shadow: none;
 }
 
 /* Optimización final del espaciado en la sección de apuntes */
