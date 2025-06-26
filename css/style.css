@@ -1971,19 +1971,22 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .filter-btn {
-    border: 1px solid #dadce0;
-    border-radius: 6px;
-    padding: 10px 16px;
-    transition: all 0.3s ease;
-    background: #ffffff;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-    font-size: 14px;
-    font-weight: 500;
-    color: #5f6368;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+	border: 1px solid #dadce0;
+	border-radius: 6px;
+	padding: 10px 16px;
+	transition: all 0.3s ease;
+	background: #ffffff;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+	font-size: 14px;
+	font-weight: 500;
+	color: #5f6368;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	white-space: nowrap;
+	flex-shrink: 0;
+	min-width: fit-content;
 }
 .filter-btn:focus {
 	border-color: #9aa0a6;
@@ -2009,6 +2012,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .filter-dropdown {
 	position: relative;
 	display: inline-block;
+	flex-shrink: 0;
 }
 
 .filter-menu {
@@ -2022,6 +2026,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	z-index: 1000;
 	min-width: 180px;
 	margin-top: 4px;
+	max-width: calc(100vw - 40px);
 }
 
 .filter-option {
@@ -2323,7 +2328,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	margin-left: -50vw;
 	margin-right: -50vw;
 	margin-top: 0;
-	margin-bottom: 50px;
+	margin-bottom:   50px;
 	padding: 0;
 	overflow: hidden;
 	border: 15px solid #dee2e6;
@@ -2580,8 +2585,8 @@ h1, h2, h3, h4, h5, h6, figure {
 	
 	/* Mejorar la visualización de cada apunte individual */
 	.note-item {
-		margin-bottom: 20px;
-		padding: 18px;
+		margin-bottom: -5px;
+		padding: 21px;
 		transition: all 0.3s ease;
 	}
 	
@@ -2686,356 +2691,58 @@ h1, h2, h3, h4, h5, h6, figure {
 
 /* Barra unificada de título y filtro */
 .notes-header {
-	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+	background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
 	border-radius: 15px 15px 0 0;
-	border-bottom: 1px solid #e0dada;
-	padding: 15px 20px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	padding: 20px 25px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  min-height: 60px;
+	flex-wrap: wrap;
+	gap: 15px;
+	min-height: 60px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+	overflow: hidden;
 }
 
 .notes-header h3 {
-  background: transparent;
-	color: #302e2e;
+	color: #495057;
 	margin: 0;
 	font-weight: 600;
-	font-size: 16px;
-  border-bottom: none;
-  box-shadow: none;
+	font-size: 18px;
+	border-bottom: none;
+	box-shadow: none;
+	display: flex;
+	align-items: center;
+	letter-spacing: 0.3px;
+	flex: 1;
+	min-width: 0;
 }
 
-/* Optimización final del espaciado en la sección de apuntes */
-.notes-filter .filter-category {
-	margin-bottom: 0;
+.notes-header h3::before {
+	content: "📚";
+	margin-right: 8px;
+	font-size: 18px;
 }
 
-/* Espaciado específico entre filtro y lista - ELIMINADO para flujo natural */
-
-/* Mejorar el espaciado del primer elemento de la lista */
-.notes-list .note-item:first-child {
-	margin-top: 0;
-	padding-top: 20px;
-}
-
-/* Hover mejorado para mejor interacción */
-.note-item {
-	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.note-item:hover {
-	background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
-	border-color: #17a2b8;
-}
-
-/* Estilos específicos para el área ampliada de escritura */
-@media (min-width: 992px) {
-	/* Maximizar el espacio del contenedor de notas */
-	.notes-container {
-		padding: 45px;
-		margin-bottom: 3em;
-	}
-	
-	/* Ampliar el área del editor de texto */
-	.note-content {
-		min-height: 350px;
-		padding: 30px;
+/* Ajustes específicos para el ícono en diferentes tamaños */
+@media (max-width: 480px) {
+	.notes-header h3::before {
 		font-size: 16px;
-		line-height: 1.8;
-		border-radius: 12px;
-	}
-	
-	/* Optimizar la barra de herramientas para el editor más ancho */
-	.notes-toolbar {
-		padding: 30px;
-		margin-bottom: 35px;
-	}
-	
-	.notes-toolbar .col-md-8 {
-		padding-right: 20px;
-	}
-	
-	.notes-toolbar .col-md-4 {
-		padding-left: 20px;
-	}
-	
-	/* Mejorar el espaciado de los campos de entrada */
-	.note-title {
-		padding: 16px 20px;
-		font-size: 17px;
-	}
-	
-	.note-category {
-		padding: 16px 20px;
-		font-size: 15px;
-	}
-	
-	/* Ampliar la barra de herramientas del editor */
-	.editor-toolbar {
-		padding: 20px 25px;
-		gap: 12px;
-	}
-	
-	.btn-editor {
-		padding: 12px 16px;
-		border-radius: 10px;
-	}
-	
-	/* Optimizar el área de botones de acción */
-	.notes-actions {
-		margin-top: 30px;
-		gap: 20px;
-	}
-	
-	.save-note,
-	.clear-note {
-		padding: 16px 35px;
-		font-size: 15px;
+		margin-right: 6px;
 	}
 }
 
-/* Ajustes adicionales para hacer el editor más cómodo */
-.note-content {
-	transition: all 0.3s ease;
-	box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
-}
-
-.note-content:focus {
-	box-shadow: 
-		inset 0 2px 4px rgba(0,0,0,0.02),
-		0 0 0 3px rgba(0,123,255,0.1);
-	transform: scale(1.001);
-}
-
-/* Optimizaciones adicionales para aprovechar el espacio horizontal */
-@media (min-width: 1200px) {
-	/* Ampliar aún más el contenedor en pantallas grandes */
-	.notes-content-wrapper {
-		padding: 40px 20px;
-	}
-	
-	.notes-content-wrapper .row {
-		max-width: 1600px;
-	}
-	
-	/* Maximizar el uso del espacio en el editor */
-	.notes-container {
-		padding: 50px;
-		min-height: 700px;
-	}
-	
-	.note-content {
-		min-height: 400px;
-		padding: 35px;
-		font-size: 16px;
-	}
-	
-	/* Optimizar la barra de herramientas para pantallas grandes */
-	.notes-toolbar {
-		padding: 35px;
-		border-radius: 18px;
-	}
-	
-	.notes-toolbar .form-control {
-		padding: 14px 20px;
-		font-size: 15px;
-	}
-	
-	/* Mejorar la distribución en la barra de herramientas */
-	.notes-toolbar .col-md-8 {
-		padding-right: 25px;
-	}
-	
-	.notes-toolbar .col-md-4 {
-		padding-left: 25px;
+@media (max-width: 320px) {
+	.notes-header h3::before {
+		font-size: 14px;
+		margin-right: 5px;
 	}
 }
 
-/* Mejoras específicas para igualar alturas y mejorar la separación visual entre filtro y apuntes */
-@media (min-width: 992px) {
-	/* Igualar la altura de ambas columnas */
-	.notes-container,
-	.saved-notes {
-		min-height: 700px;
+@media (max-width: 280px) {
+	.notes-header h3::before {
+		font-size: 12px;
+		margin-right: 4px;
 	}
-	
-	/* Mejorar la separación visual entre filtro y apuntes */
-	.notes-filter {
-		background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-		border: 1px solid #dee2e6;
-		border-radius: 12px;
-		padding: 20px;
-		margin-bottom: 0;
-		box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-	}
-	
-	.notes-filter .filter-category {
-		border: 1px solid #dee2e6;
-		background: #ffffff;
-		margin-bottom: 0;
-	}
-	
-	/* Separación clara entre filtro y lista */
-	.notes-list {
-		margin-top: 30px;
-		padding-top: 25px;
-		border-top: 2px solid #f0f0f0;
-		position: relative;
-	}
-	
-	/* Indicador visual de separación */
-	.notes-list::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 40px;
-		height: 2px;
-		background: linear-gradient(90deg, #28a745, #17a2b8);
-		border-radius: 1px;
-	}
-	
-	/* Optimizar el scroll de la lista de apuntes */
-	.notes-list {
-		overflow-y: auto;
-		max-height: 500px;
-		padding-right: 10px;
-		flex: 1;
-	}
-	
-	/* Personalizar la barra de scroll */
-	.notes-list::-webkit-scrollbar {
-		width: 6px;
-	}
-	
-	.notes-list::-webkit-scrollbar-track {
-		background: #f1f1f1;
-		border-radius: 3px;
-	}
-	
-	.notes-list::-webkit-scrollbar-thumb {
-		background: #c1c1c1;
-		border-radius: 3px;
-		transition: background 0.3s ease;
-	}
-	
-	.notes-list::-webkit-scrollbar-thumb:hover {
-		background: #a8a8a8;
-	}
-}
-
-/* Optimizaciones específicas para la visualización completa de apuntes */
-@media (min-width: 992px) {
-	/* Reducir la altura mínima para que quepan más apuntes visibles */
-	.saved-notes {
-		min-height: 720px;
-		padding: 25px;
-		display: flex;
-		flex-direction: column;
-	}
-	
-	/* Optimizar el título para ocupar menos espacio */
-	.saved-notes h3 {
-		font-size: 20px;
-		margin-bottom: 15px;
-		padding-bottom: 10px;
-		flex-shrink: 0;
-	}
-	
-	/* Optimizar el filtro para ser más compacto */
-	.notes-filter {
-		margin-bottom: 0;
-		padding: 15px;
-		flex-shrink: 0;
-	}
-	
-	/* Optimizar la lista para mostrar más contenido */
-	.notes-list {
-		margin-top: 20px;
-		padding-top: 15px;
-		flex: 1;
-		overflow-y: auto;
-		max-height: 520px;
-		min-height: 400px;
-	}
-	
-	/* Mejorar la distribución del espacio en cada apunte */
-	.note-item {
-		padding: 14px;
-		margin-bottom: 10px;
-	}
-	
-	/* Optimizar las categorías para que ocupen menos espacio */
-	.note-category {
-		padding: 4px 10px;
-		font-size: 10px;
-		border-radius: 20px;
-	}
-	
-	/* Hacer la fecha más compacta */
-	.note-date {
-		font-size: 11px;
-		color: #8c9096;
-	}
-	
-	/* Mejorar la previsualización */
-	.note-preview {
-		font-size: 13px;
-		line-height: 1.3;
-		margin-bottom: 8px;
-	}
-	
-	/* Hacer los botones aún más compactos */
-	.note-actions {
-		margin-top: 8px;
-		padding-top: 8px;
-		gap: 6px;
-	}
-}
-
-/* Indicador visual de scroll para la lista de apuntes */
-.notes-list {
-	position: relative;
-}
-
-.notes-list::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 20px;
-	background: linear-gradient(transparent, rgba(248, 249, 250, 0.8));
-	pointer-events: none;
-	opacity: 0;
-	transition: opacity 0.3s ease;
-}
-
-.notes-list:hover::after {
-	opacity: 1;
-}
-
-/* Mejorar la barra de scroll para que sea más visible */
-.notes-list::-webkit-scrollbar {
-	width: 8px;
-}
-
-.notes-list::-webkit-scrollbar-track {
-	background: rgba(233, 236, 239, 0.5);
-	border-radius: 4px;
-	margin: 5px 0;
-}
-
-.notes-list::-webkit-scrollbar-thumb {
-	background: rgba(108, 117, 125, 0.5);
-	border-radius: 4px;
-	transition: background 0.3s ease;
-}
-
-.notes-list::-webkit-scrollbar-thumb:hover {
-	background: rgba(108, 117, 125, 0.8);
 }
