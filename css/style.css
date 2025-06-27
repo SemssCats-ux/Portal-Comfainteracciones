@@ -955,7 +955,10 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative;
   float: left;
   width: 100%;
+  padding: 5em 0; /* Reducción del padding vertical (antes era más grande) */
+  margin-bottom: 5em; /* Añadir espacio entre esta sección y el copyright */
 }
+
 #fh5co-started .overlay {
   z-index: 0;
   position: absolute;
