@@ -3245,9 +3245,10 @@ h1, h2, h3, h4, h5, h6, figure {
 *
 * ======================================================= */
 .page-cursos #fh5co-started {
-  padding-top: 5em;
+  padding-top: 6em;
   padding-bottom: 5em;
   margin-bottom: 0;
+  margin-top: 2em;
 }
 
 .page-cursos #fh5co-started .fh5co-heading {
@@ -3275,8 +3276,9 @@ h1, h2, h3, h4, h5, h6, figure {
 /* Media queries para responsividad en la página de cursos */
 @media screen and (max-width: 768px) {
   .page-cursos #fh5co-started {
-    padding-top: 4em;
+    padding-top: 5em;
     padding-bottom: 4em;
+    margin-top: 1.5em;
   }
   
   .page-cursos #fh5co-started .fh5co-heading {
@@ -3294,8 +3296,9 @@ h1, h2, h3, h4, h5, h6, figure {
 
 @media screen and (max-width: 480px) {
   .page-cursos #fh5co-started {
-    padding-top: 3em;
+    padding-top: 4em;
     padding-bottom: 3em;
+    margin-top: 1em;
   }
   
   .page-cursos #fh5co-started h2 {
@@ -3318,48 +3321,49 @@ h1, h2, h3, h4, h5, h6, figure {
 /* Título destacado para la sección de cursos */
 .page-cursos .title-box-header {
   background-color: #ffffff;
-  border-radius: 8px;
-  padding: 2em;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 3em;
+  border-radius: 6px;
+  padding: 1.2em;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2em;
   text-align: center;
 }
 
 .page-cursos .title-with-bars {
   display: inline-block;
   position: relative;
-  padding: 1em 2em;
-  background-color: #EA9215;
-  color: white;
-  border-radius: 8px;
-  font-size: 24px;
+  padding: 0.6em 1.5em;
+  background-color: #f8f9fa;
+  color: #333;
+  border-radius: 6px;
+  font-size: 20px;
   font-weight: 600;
-  margin-bottom: 1em;
+  margin-bottom: 0.8em;
+  border: 2px solid #e9ecef;
 }
 
 .page-cursos .title-with-bars:before,
 .page-cursos .title-with-bars:after {
   content: "";
   position: absolute;
-  width: 60px;
-  height: 4px;
-  background-color: #EA9215;
+  width: 40px;
+  height: 2px;
+  background-color: #dee2e6;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .page-cursos .title-with-bars:before {
-  left: -80px;
+  left: -60px;
 }
 
 .page-cursos .title-with-bars:after {
-  right: -80px;
+  right: -60px;
 }
 
 .page-cursos .title-box-header p {
   color: #777;
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -3401,27 +3405,28 @@ h1, h2, h3, h4, h5, h6, figure {
 /* Grid de materias compacto */
 .page-cursos .subjects-compact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 1.5em;
+  margin-bottom: 4em;
 }
 
 .page-cursos .subject-compact {
   background-color: #ffffff;
-  border-radius: 12px;
-  padding: 1.5em;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
   position: relative;
   overflow: hidden;
 }
 
 .page-cursos .subject-compact:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .page-cursos .subject-compact::before {
@@ -3430,35 +3435,35 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 0;
   top: 0;
   bottom: 0;
-  width: 4px;
+  width: 3px;
   background-color: #EA9215;
 }
 
 /* Iconos de materias */
 .page-cursos .subject-icon {
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   background-color: #f8f9fa;
-  border-radius: 10px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 20px;
   color: #EA9215;
   flex-shrink: 0;
 }
 
 .page-cursos .notification-dot {
   position: absolute;
-  top: -5px;
-  right: -5px;
+  top: -4px;
+  right: -4px;
   background-color: #ff4757;
   color: white;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  font-size: 11px;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -3478,38 +3483,38 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .page-cursos .subject-info h4 {
-  margin: 0 0 5px 0;
+  margin: 0 0 4px 0;
   color: #333;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
 }
 
 .page-cursos .subject-info p {
   margin: 0;
   color: #777;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* Acciones rápidas */
 .page-cursos .subject-quick-actions {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   flex-shrink: 0;
 }
 
 .page-cursos .quick-btn {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   border: none;
   background-color: #f8f9fa;
-  border-radius: 8px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
   color: #666;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .page-cursos .quick-btn:hover {
@@ -3600,17 +3605,17 @@ h1, h2, h3, h4, h5, h6, figure {
   
   .page-cursos .subjects-compact-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 12px;
   }
   
   .page-cursos .subject-compact {
-    padding: 1em;
+    padding: 0.8em;
   }
   
   .page-cursos .subject-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
   }
   
   .page-cursos .modal-content {
@@ -3633,10 +3638,21 @@ h1, h2, h3, h4, h5, h6, figure {
   .page-cursos .subject-compact {
     flex-direction: column;
     text-align: center;
-    gap: 10px;
+    gap: 8px;
+    padding: 0.7em;
   }
   
   .page-cursos .subject-quick-actions {
     justify-content: center;
+  }
+  
+  .page-cursos .title-box-header {
+    padding: 1em;
+    margin-bottom: 1.5em;
+  }
+  
+  .page-cursos .title-with-bars {
+    font-size: 18px;
+    padding: 0.5em 1.2em;
   }
 }
