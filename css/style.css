@@ -3324,18 +3324,17 @@ h1, h2, h3, h4, h5, h6, figure {
   border-radius: 6px;
   padding: 1.2em;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-  margin-bottom: 2em;
+  margin-bottom: 2em;  /* ← Cambiar por 3em o 4em */
+  margin-top: 1em;     /* ← Agregar esta línea para espacio arriba */
   text-align: center;
 }
 
 .page-cursos .title-with-bars {
-  display: inline-block;
   position: relative;
   padding: 0.6em 1.5em;
   background-color: #f8f9fa;
   color: #333;
   border-radius: 6px;
-  font-size: 20px;
   font-weight: 600;
   margin-bottom: 0.8em;
   border: 2px solid #e9ecef;
@@ -3343,7 +3342,6 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .page-cursos .title-with-bars:before,
 .page-cursos .title-with-bars:after {
-  content: "";
   position: absolute;
   width: 40px;
   height: 2px;
