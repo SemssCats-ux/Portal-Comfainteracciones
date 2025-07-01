@@ -955,6 +955,8 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative;
   float: left;
   width: 100%;
+  padding: 40px 0; /* Reducción del padding vertical (originalmente era más grande) */
+  margin-bottom: 80px; /* Espacio considerable entre la sección y el footer */
 }
 #fh5co-started .overlay {
   z-index: 0;
@@ -2273,6 +2275,36 @@ h1, h2, h3, h4, h5, h6, figure {
 		flex-direction: column;
 	}
 	
+	#fh5co-started {
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 40px 0; /* Reducción del padding vertical (originalmente era más grande) */
+  margin-bottom: 80px; /* Espacio considerable entre la sección y el footer */
+}
+
+/* Asegurarse que haya suficiente espacio entre Lets Get Started y el copyright */
+.row.copyright {
+  padding-top: 40px;
+  margin-top: 60px;
+  position: relative;
+  clear: both;
+}
+
+/* Línea divisoria antes del copyright para mejor separación visual */
+.row.copyright::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background-color: #e6e6e6;
+}
+	
 	.save-note,
 	.clear-note {
 		width: 100%;
@@ -2280,7 +2312,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 	
 	.note-header {
-		flex-direction: column;
+																																																	flex-direction: column;
 		align-items: flex-start;
 		gap: 8px;
 	}
@@ -2329,7 +2361,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23666666' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+ background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23666666' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
 	opacity: 0.5;
 }
 
@@ -2733,4 +2765,892 @@ h1, h2, h3, h4, h5, h6, figure {
 		font-size: 12px;
 		margin-right: 4px;
 	}
+}
+
+/* =======================================================
+*
+* 	Estilos para la página de calificaciones
+*
+* ======================================================= */
+.page-calificaciones #fh5co-student-grades {
+  padding: 7em 0;
+  background-color: #f9f9f9;
+}
+
+/* Estilos para la tarjeta de información del estudiante */
+.page-calificaciones .student-info-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3em;
+  position: relative;
+}
+
+.page-calificaciones .student-avatar {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-color: #EA9215;
+  border-radius: 50%;
+  color: white;
+  font-size: 40px;
+  line-height: 80px;
+  margin-bottom: 15px;
+}
+
+.page-calificaciones .student-name {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.page-calificaciones .student-details {
+  color: #777;
+  font-size: 18px;
+  margin-bottom: 1em;
+}
+
+.page-calificaciones .current-period-badge {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+/* Estilos para el progreso académico */
+.page-calificaciones .academic-progress {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3em;
+}
+
+.page-calificaciones .academic-progress h3 {
+  color: #333;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.page-calificaciones .progress-timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 2em 0;
+}
+
+.page-calificaciones .progress-timeline:before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  background-color: #e0e0e0;
+  top: 25px;
+  left: 60px;
+  right: 60px;
+  z-index: 1;
+}
+
+.page-calificaciones .period-step {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 25%;
+}
+
+.page-calificaciones .step-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  color: #777;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.page-calificaciones .period-step.completed .step-circle {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.page-calificaciones .period-step.current .step-circle {
+  background-color: #EA9215;
+  color: white;
+}
+
+.page-calificaciones .step-label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.page-calificaciones .step-status {
+  font-size: 14px;
+  color: #777;
+}
+
+.page-calificaciones .period-step.completed .step-status {
+  color: #4CAF50;
+}
+
+.page-calificaciones .period-step.current .step-status {
+  color: #EA9215;
+}
+
+.page-calificaciones .period-step.locked .step-circle {
+  background-color: #e0e0e0;
+  color: #999;
+}
+
+/* Estilos para las tarjetas de períodos */
+.page-calificaciones .periods-grid {
+  margin-bottom: 3em;
+}
+
+.page-calificaciones .period-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  opacity: 0; /* Inicialmente invisible para animación */
+}
+
+.page-calificaciones .period-card.hovered {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.page-calificaciones .period-header {
+  padding: 1.5em;
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.page-calificaciones .period-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+
+.page-calificaciones .period-icon.current {
+  background-color: #EA9215;
+}
+
+.page-calificaciones .period-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.page-calificaciones .period-average {
+  margin-top: 10px;
+}
+
+.page-calificaciones .average-score {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+.page-calificaciones .max-score {
+  color: #999;
+  font-size: 18px;
+}
+
+.page-calificaciones .current-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #EA9215;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.page-calificaciones .period-body {
+  padding: 1em;
+}
+
+.page-calificaciones .subjects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-calificaciones .subject-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.page-calificaciones .subject-item:last-child {
+  border-bottom: none;
+}
+
+.page-calificaciones .subject-name {
+  color: #555;
+}
+
+.page-calificaciones .subject-grade {
+  font-weight: bold;
+  width: 50px;
+  height: 30px;
+  border-radius: 15px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+}
+
+.page-calificaciones .subject-grade.excellent {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.page-calificaciones .subject-grade.good {
+  background-color: #2196F3;
+  color: white;
+}
+
+.page-calificaciones .subject-grade.satisfactory {
+  background-color: #FF9800;
+  color: white;
+}
+
+.page-calificaciones .subject-grade.needs-improvement {
+  background-color: #F44336;
+  color: white;
+}
+
+.page-calificaciones .period-footer {
+  padding: 1em;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.page-calificaciones .btn-view-details {
+  background-color: transparent;
+  border: 2px solid #EA9215;
+  color: #EA9215;
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page-calificaciones .btn-view-details:hover {
+  background-color: #EA9215;
+  color: white;
+}
+
+/* Estilos para período bloqueado */
+.page-calificaciones .locked-period {
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.page-calificaciones .locked-content {
+  padding: 3em 1em;
+}
+
+.page-calificaciones .lock-icon {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  color: #999;
+  font-size: 40px;
+  line-height: 80px;
+  margin-bottom: 15px;
+}
+
+.page-calificaciones .lock-message {
+  color: #777;
+  margin-bottom: 2em;
+  font-size: 18px;
+}
+
+.page-calificaciones .unlock-progress {
+  max-width: 300px;
+  margin: 0 auto;
+  color: #777;
+}
+
+.page-calificaciones .progress-bar {
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.page-calificaciones .progress-fill {
+  height: 100%;
+  background-color: #EA9215;
+}
+
+/* Estilos para el resumen académico */
+.page-calificaciones .academic-summary {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.page-calificaciones .academic-summary h3 {
+  color: #333;
+  margin-bottom: 1.5em;
+}
+
+.page-calificaciones .summary-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.page-calificaciones .stat-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5em;
+  text-align: center;
+  width: calc(25% - 20px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.page-calificaciones .stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.page-calificaciones .stat-icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: #EA9215;
+  border-radius: 50%;
+  color: white;
+  font-size: 30px;
+  line-height: 60px;
+  margin-bottom: 15px;
+}
+
+.page-calificaciones .stat-number {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.page-calificaciones .stat-label {
+  color: #777;
+  font-size: 16px;
+}
+
+/* Efectos de animación */
+.page-calificaciones .pulse {
+  animation: pulse-animation 0.6s ease-out;
+}
+
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Ajustes específicos para la sección fh5co-started */
+.page-calificaciones #fh5co-started {
+  padding-top: 6em;
+  padding-bottom: 6em;
+  margin-bottom: 0;
+}
+
+/* Media queries para responsividad */
+@media screen and (max-width: 768px) {
+  .page-calificaciones .progress-timeline:before {
+    left: 20px;
+    right: 20px;
+  }
+  
+  .page-calificaciones .stat-card {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .page-calificaciones .period-card {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page-calificaciones .progress-timeline {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .page-calificaciones .progress-timeline:before {
+    display: none;
+  }
+  
+  .page-calificaciones .period-step {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .page-calificaciones .step-circle {
+    margin: 0 15px 0 0;
+  }
+  
+  .page-calificaciones .stat-card {
+    width: 100%;
+  }
+}
+
+/* =======================================================
+*
+* 	Estilos para la página de cursos
+*
+* ======================================================= */
+.page-cursos #fh5co-started {
+  padding-top: 6em;
+  padding-bottom: 5em;
+  margin-bottom: 0;
+  margin-top: 2em;
+}
+
+.page-cursos #fh5co-started .fh5co-heading {
+  margin-bottom: 3em;
+}
+
+.page-cursos #fh5co-started h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.page-cursos #fh5co-started p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.page-cursos .footer-spacer {
+  height: 60px;
+}
+
+.page-cursos .row.copyright {
+  margin-top: 30px;
+}
+
+/* Media queries para responsividad en la página de cursos */
+@media screen and (max-width: 768px) {
+  .page-cursos #fh5co-started {
+    padding-top: 5em;
+    padding-bottom: 4em;
+    margin-top: 1.5em;
+  }
+  
+  .page-cursos #fh5co-started .fh5co-heading {
+    margin-bottom: 2em;
+  }
+  
+  .page-cursos #fh5co-started h2 {
+    font-size: 28px;
+  }
+  
+  .page-cursos .footer-spacer {
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page-cursos #fh5co-started {
+    padding-top: 4em;
+    padding-bottom: 3em;
+    margin-top: 1em;
+  }
+  
+  .page-cursos #fh5co-started h2 {
+    font-size: 24px;
+  }
+  
+  .page-cursos .footer-spacer {
+    height: 30px;
+  }
+}
+
+/* Estilos específicos para la sección "Lets Get Started" en la página de cursos */
+
+/* =======================================================
+*
+* 	Estilos adicionales para la página de cursos - Sección de materias
+*
+* ======================================================= */
+
+/* Título destacado para la sección de cursos */
+.page-cursos .title-box-header {
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 1.2em;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2em;  /* ← Cambiar por 3em o 4em */
+  margin-top: 1em;     /* ← Agregar esta línea para espacio arriba */
+  text-align: center;
+}
+
+.page-cursos .title-with-bars {
+  position: relative;
+  padding: 0.6em 1.5em;
+  background-color: #f8f9fa;
+  color: #333;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-bottom: 0.8em;
+  border: 2px solid #e9ecef;
+}
+
+.page-cursos .title-with-bars:before,
+.page-cursos .title-with-bars:after {
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: #dee2e6;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.page-cursos .title-with-bars:before {
+  left: -60px;
+}
+
+.page-cursos .title-with-bars:after {
+  right: -60px;
+}
+
+.page-cursos .title-box-header p {
+  color: #777;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Contenedor de filtros */
+.page-cursos .filters-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5em;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2em;
+}
+
+.page-cursos .filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.page-cursos .filter-pill {
+  background-color: #f5f5f5;
+  border: 2px solid transparent;
+  color: #666;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.page-cursos .filter-pill:hover,
+.page-cursos .filter-pill.active {
+  background-color: #EA9215;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Grid de materias compacto */
+.page-cursos .subjects-compact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 1.5em;
+  margin-bottom: 4em;
+}
+
+.page-cursos .subject-compact {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-cursos .subject-compact:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.page-cursos .subject-compact::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: #EA9215;
+}
+
+/* Iconos de materias */
+.page-cursos .subject-icon {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #EA9215;
+  flex-shrink: 0;
+}
+
+.page-cursos .notification-dot {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: #ff4757;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 11px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Información de la materia */
+.page-cursos .subject-info {
+  flex: 1;
+}
+
+.page-cursos .subject-info h4 {
+  margin: 0 0 4px 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.page-cursos .subject-info p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+}
+
+/* Acciones rápidas */
+.page-cursos .subject-quick-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.page-cursos .quick-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #666;
+  font-size: 14px;
+}
+
+.page-cursos .quick-btn:hover {
+  background-color: #EA9215;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Colores específicos para cada materia */
+.page-cursos .subject-compact.lengua::before { background-color: #e74c3c; }
+.page-cursos .subject-compact.matematicas::before { background-color: #3498db; }
+.page-cursos .subject-compact.ingles::before { background-color: #9b59b6; }
+.page-cursos .subject-compact.fisica::before { background-color: #f39c12; }
+.page-cursos .subject-compact.quimica::before { background-color: #2ecc71; }
+.page-cursos .subject-compact.biologia::before { background-color: #27ae60; }
+.page-cursos .subject-compact.loc::before { background-color: #e67e22; }
+.page-cursos .subject-compact.estadistica::before { background-color: #34495e; }
+.page-cursos .subject-compact.geometria::before { background-color: #16a085; }
+.page-cursos .subject-compact.informatica::before { background-color: #2c3e50; }
+.page-cursos .subject-compact.tecnica::before { background-color: #95a5a6; }
+.page-cursos .subject-compact.musica::before { background-color: #8e44ad; }
+.page-cursos .subject-compact.artistica::before { background-color: #d35400; }
+.page-cursos .subject-compact.edfisica::before { background-color: #c0392b; }
+.page-cursos .subject-compact.sociales::before { background-color: #f1c40f; }
+.page-cursos .subject-compact.catedrapaz::before { background-color: #1abc9c; }
+.page-cursos .subject-compact.economia::before { background-color: #2980b9; }
+.page-cursos .subject-compact.filosofia::before { background-color: #7f8c8d; }
+.page-cursos .subject-compact.religion::before { background-color: #9b59b6; }
+.page-cursos .subject-compact.etica::before { background-color: #e91e63; }
+
+/* Modal para detalles de materias */
+.page-cursos .modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease;
+}
+
+.page-cursos .modal-content {
+  background-color: #ffffff;
+  margin: 5% auto;
+  padding: 2em;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.page-cursos .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.page-cursos .close:hover {
+  color: #333;
+}
+
+/* Responsivo para la página de cursos */
+@media screen and (max-width: 768px) {
+  .page-cursos .title-with-bars:before,
+  .page-cursos .title-with-bars:after {
+    display: none;
+  }
+  
+  .page-cursos .subjects-compact-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .page-cursos .subject-compact {
+    padding: 0.8em;
+  }
+  
+  .page-cursos .subject-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+  
+  .page-cursos .modal-content {
+    margin: 10% auto;
+    padding: 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page-cursos .filter-pills {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  .page-cursos .filter-pill {
+    flex-shrink: 0;
+  }
+  
+  .page-cursos .subject-compact {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    padding: 0.7em;
+  }
+  
+  .page-cursos .subject-quick-actions {
+    justify-content: center;
+  }
+  
+  .page-cursos .title-box-header {
+    padding: 1em;
+    margin-bottom: 1.5em;
+  }
+  
+  .page-cursos .title-with-bars {
+    font-size: 18px;
+    padding: 0.5em 1.2em;
+  }
 }

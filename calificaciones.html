@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Learn &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+	<title>Comfainteracciones PortaL Estudiantil</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -61,7 +61,7 @@
 	<![endif]-->
 
 	</head>
-	<body>
+	<body class="page-calificaciones">
 		
 	<div class="fh5co-loader"></div>
 	
@@ -85,7 +85,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-1">
-						<div id="fh5co-logo"><a href="index.html">Confainteracciones<span>.</span></a></div>
+						<div id="fh5co-logo"><a href="index.html">Comfainteracciones<span>.</span></a></div>
 					</div>
 					<div class="col-xs-11 text-right menu-1">
 						<ul>
@@ -127,75 +127,271 @@
 		</div>
 	</header>
 
-	<div id="fh5co-pricing">
+	<div id="fh5co-student-grades">
 		<div class="container">
+			<!-- Información del estudiante -->
 			<div class="row">
-				<div class="pricing">
-					<div class="col-md-3 animate-box">
-						<div class="price-box">
-							<h2 class="pricing-plan">Starter</h2>
-							<div class="price"><sup class="currency">$</sup>9<small>/month</small></div>
-							<ul class="classes">
-								<li>15 English 101</li>
-								<li class="color">10 Web Development</li>
-								<li>10 Yoga Classes</li>
-								<li class="color">20 Virtual Assistant</li>
-								<li>10 System Analyst</li>
-								<li class="color">5 WordPress</li>
-								<li>10 Programming</li>
-							</ul>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+				<div class="col-md-12 text-center animate-box">
+					<div class="student-info-card">
+						<div class="student-avatar">
+							<i class="icon-user"></i>
+						</div>
+						<h2 class="student-name">María Fernanda Rodríguez</h2>
+						<p class="student-details">Grado 10° A | ID: 2024-0234</p>
+						<div class="current-period-badge">
+							<span>Período Actual: 3er Período</span>
 						</div>
 					</div>
+				</div>
+			</div>
 
-					<div class="col-md-3 animate-box">
-						<div class="price-box">
-							<h2 class="pricing-plan">Basic</h2>
-							<div class="price"><sup class="currency">$</sup>27<small>/month</small></div>
-							<ul class="classes">
-								<li>15 English 101</li>
-								<li class="color">10 Web Development</li>
-								<li>10 Yoga Classes</li>
-								<li class="color">20 Virtual Assistant</li>
-								<li>10 System Analyst</li>
-								<li class="color">5 WordPress</li>
-								<li>10 Programming</li>
-							</ul>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+			<!-- Progreso académico -->
+			<div class="row">
+				<div class="col-md-12 animate-box">
+					<div class="academic-progress">
+						<h3>Tu Progreso Académico</h3>
+						<div class="progress-timeline">
+							<div class="period-step completed" data-period="1">
+								<div class="step-circle">1</div>
+								<div class="step-label">Primer Período</div>
+								<div class="step-status">Completado</div>
+							</div>
+							<div class="period-step completed" data-period="2">
+								<div class="step-circle">2</div>
+								<div class="step-label">Segundo Período</div>
+								<div class="step-status">Completado</div>
+							</div>
+							<div class="period-step current" data-period="3">
+								<div class="step-circle">3</div>
+								<div class="step-label">Tercer Período</div>
+								<div class="step-status">En Curso</div>
+							</div>
+							<div class="period-step locked" data-period="4">
+								<div class="step-circle">
+									<i class="icon-lock"></i>
+								</div>
+								<div class="step-label">Cuarto Período</div>
+								<div class="step-status">Bloqueado</div>
+							</div>
 						</div>
 					</div>
+				</div>
+			</div>
 
-					<div class="col-md-3 animate-box">
-						<div class="price-box popular">
-							<h2 class="pricing-plan pricing-plan-offer">Pro <span>Best Offer</span></h2>
-							<div class="price"><sup class="currency">$</sup>74<small>/month</small></div>
-							<ul class="classes">
-								<li>15 English 101</li>
-								<li class="color">10 Web Development</li>
-								<li>10 Yoga Classes</li>
-								<li class="color">20 Virtual Assistant</li>
-								<li>10 System Analyst</li>
-								<li class="color">5 WordPress</li>
-								<li>10 Programming</li>
+			<!-- Calificaciones por período -->
+			<div class="row periods-grid">
+				<!-- Primer Período -->
+				<div class="col-md-4 animate-box">
+					<div class="period-card completed-period" data-period="1">
+						<div class="period-header">
+							<div class="period-icon">
+								<i class="icon-check"></i>
+							</div>
+							<h3>Primer Período</h3>
+							<div class="period-average">
+								<span class="average-score">4.2</span>
+								<span class="max-score">/5.0</span>
+							</div>
+						</div>
+						<div class="period-body">
+							<ul class="subjects-list">
+								<li class="subject-item">
+									<span class="subject-name">Matemáticas</span>
+									<span class="subject-grade excellent">4.5</span>
+								</li>
+								<li class="subject-item">
+									<span class="subject-name">Español</span>
+									<span class="subject-grade good">4.0</span>
+								</li>
+								<li class="subject-item">
+									<span class="subject-name">Ciencias Naturales</span>
+									<span class="subject-grade excellent">4.3</span>
+								</li>
+								<li class="subject-item">
+									<span class="subject-name">Inglés</span>
+									<span class="subject-grade satisfactory">3.8</span>
+								</li>
+								<li class="subject-item">
+									<span class="subject-name">Ciencias Sociales</span>
+									<span class="subject-grade good">4.2</span>
+								</li>
+								<li class="subject-item">
+									<span class="subject-name">Educación Física</span>
+									<span class="subject-grade excellent">4.7</span>
+								</li>
 							</ul>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+						</div>
+						<div class="period-footer">
+							<button class="btn-view-details" onclick="viewPeriodDetails(1)">
+								<i class="icon-eye"></i> Ver Detalles
+							</button>
 						</div>
 					</div>
+				</div>
 
-					<div class="col-md-3 animate-box">
-						<div class="price-box">
-							<h2 class="pricing-plan">Unlimited</h2>
-							<div class="price"><sup class="currency">$</sup>140<small>/month</small></div>
-							<ul class="classes">
-								<li>15 English 101</li>
-								<li class="color">10 Web Development</li>
-								<li>10 Yoga Classes</li>
-								<li class="color">20 Virtual Assistant</li>
-								<li>10 System Analyst</li>
-								<li class="color">5 WordPress</li>
-								<li>10 Programming</li>
+				<!-- Segundo Período -->
+				<div class="col-md-4 animate-box">
+					<div class="period-card completed-period" data-period="2">
+						<div class="period-header">
+							<div class="period-icon">
+								<i class="icon-check"></i>
+							</div>
+							<h3>Segundo Período</h3>
+							<div class="period-average">
+								<span class="average-score">4.0</span>
+								<span class="max-score">/5.0</span>
+							</div>
+						</div>
+						<div class="period-body">
+							<ul class="subjects-list">
+								<li class="subject-item">
+									<span class="subject-name">Matemáticas</span>
+									<span class="subject-grade satisfactory">3.8</span>
+								</li>
+								<li class="subject-item">
+									<span class="subject-name">Español</span>
+									<span class="subject-grade good">4.2</span>
+								</li>
+								<li class="subject-item">
+									<span class="subject-name">Ciencias Naturales</span>
+									<span class="subject-grade good">4.0</span>
+								</li>
+								<li class="subject-item">
+									<span class="subject-name">Inglés</span>
+									<span class="subject-grade satisfactory">3.9</span>
+								</li>
+								<li class="subject-item">
+									<span class="subject-name">Ciencias Sociales</span>
+									<span class="subject-grade good">4.1</span>
+								</li>
+								<li class="subject-item">
+									<span class="subject-name">Educación Física</span>
+									<span class="subject-grade excellent">4.5</span>
+								</li>
 							</ul>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+						</div>
+						<div class="period-footer">
+							<button class="btn-view-details" onclick="viewPeriodDetails(2)">
+								<i class="icon-eye"></i> Ver Detalles
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tercer Período (Actual) -->
+				<div class="col-md-4 animate-box">
+					<div class="period-card current-period" data-period="3">
+						<div class="period-header">
+							<div class="period-icon current">
+								<i class="icon-clock"></i>
+							</div>
+							<h3>Tercer Período</h3>
+							<div class="current-badge">Actual</div>
+							<div class="period-average">
+								<span class="average-score">4.3</span>
+								<span class="max-score">/5.0</span>
+							</div>
+						</div>
+						<div class="period-body">
+							<ul class="subjects-list">
+								<li class="subject-item">
+									<span class="subject-name">Matemáticas</span>
+									<span class="subject-grade good">4.2</span>
+								</li>
+								<li class="subject-item">
+									<span class="subject-name">Español</span>
+									<span class="subject-grade excellent">4.4</span>
+								</li>
+								<li class="subject-item">
+									<span class="subject-name">Ciencias Naturales</span>
+									<span class="subject-grade excellent">4.5</span>
+								</li>
+								<li class="subject-item">
+									<span class="subject-name">Inglés</span>
+									<span class="subject-grade good">4.0</span>
+								</li>
+								<li class="subject-item">
+									<span class="subject-name">Ciencias Sociales</span>
+									<span class="subject-grade excellent">4.3</span>
+								</li>
+								<li class="subject-item">
+									<span class="subject-name">Educación Física</span>
+									<span class="subject-grade excellent">4.8</span>
+								</li>
+							</ul>
+						</div>
+						<div class="period-footer">
+							<button class="btn-view-details" onclick="viewPeriodDetails(3)">
+								<i class="icon-eye"></i> Ver Detalles
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Cuarto Período Bloqueado -->
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 animate-box">
+					<div class="period-card locked-period">
+						<div class="locked-content">
+							<div class="lock-icon">
+								<i class="icon-lock"></i>
+							</div>
+							<h3>Cuarto Período</h3>
+							<p class="lock-message">Este período estará disponible cuando completes el 3er período</p>
+							<div class="unlock-progress">
+								<span>Progreso del período actual: 75%</span>
+								<div class="progress-bar">
+									<div class="progress-fill" style="width: 75%"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Resumen General -->
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 animate-box">
+					<div class="academic-summary">
+						<h3>Resumen Académico General</h3>
+						<div class="summary-stats">
+							<div class="stat-card">
+								<div class="stat-icon">
+									<i class="icon-trending-up"></i>
+								</div>
+								<div class="stat-content">
+									<span class="stat-number">4.17</span>
+									<span class="stat-label">Promedio General</span>
+								</div>
+							</div>
+							<div class="stat-card">
+								<div class="stat-icon">
+									<i class="icon-book-open"></i>
+								</div>
+								<div class="stat-content">
+									<span class="stat-number">18</span>
+									<span class="stat-label">Materias Completadas</span>
+								</div>
+							</div>
+							<div class="stat-card">
+								<div class="stat-icon">
+									<i class="icon-calendar"></i>
+								</div>
+								<div class="stat-content">
+									<span class="stat-number">3</span>
+									<span class="stat-label">Períodos en Progreso</span>
+								</div>
+							</div>
+							<div class="stat-card">
+								<div class="stat-icon">
+									<i class="icon-award"></i>
+								</div>
+								<div class="stat-content">
+									<span class="stat-number">Bueno</span>
+									<span class="stat-label">Rendimiento</span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -203,18 +399,18 @@
 		</div>
 	</div>
 	
-	<div id="fh5co-started" style="background-image:url(images/img_bg_3.jpg);">
+	<div id="fh5co-started" class="calificaciones-started" style="background-image:url(images/img_bg_3.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Lets Get Started</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+					<h2>¿Necesitas Ayuda con tus Estudios?</h2>
+					<p>Si tienes dificultades con alguna materia o quieres mejorar tus calificaciones, no dudes en solicitar apoyo. Nuestros profesores están disponibles para tutorías y asesoría académica.</p>
 				</div>
 			</div>
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center">
-					<p><a href="#" class="btn btn-default btn-lg">Create A Free Course</a></p>
+					<p><a href="#" class="btn btn-default btn-lg">Solicitar Apoyo Académico</a></p>
 				</div>
 			</div>
 		</div>
@@ -315,6 +511,51 @@
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	
+	<!-- Student Grades functionality -->
+	<script>
+		// Función para ver detalles del período
+		function viewPeriodDetails(period) {
+			const periodNames = {
+				1: 'Primer Período',
+				2: 'Segundo Período', 
+				3: 'Tercer Período'
+			};
+			
+			alert(`Mostrando detalles del ${periodNames[period]}.\n\nAquí se puede implementar:\n- Tareas y evaluaciones\n- Observaciones del profesor\n- Gráficos de progreso\n- Recomendaciones de mejora`);
+		}
+
+		// Animaciones y efectos al cargar la página
+		$(document).ready(function() {
+			// Efecto de aparición secuencial para las tarjetas de período
+			$('.period-card').each(function(index) {
+				$(this).delay(index * 200).animate({
+					opacity: 1
+				}, 500);
+			});
+
+			// Efecto hover para las tarjetas de período
+			$('.period-card:not(.locked-period)').hover(
+				function() {
+					$(this).addClass('hovered');
+				},
+				function() {
+					$(this).removeClass('hovered');
+				}
+			);
+
+			// Efecto de pulsación en los pasos del timeline
+			$('.period-step.completed, .period-step.current').click(function() {
+				const period = $(this).data('period');
+				if (period <= 3) {
+					$(this).addClass('pulse');
+					setTimeout(() => {
+						$(this).removeClass('pulse');
+					}, 600);
+				}
+			});
+		});
+	</script>
 
 	</body>
 </html>
