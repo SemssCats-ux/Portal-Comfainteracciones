@@ -955,10 +955,9 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative;
   float: left;
   width: 100%;
-  padding: 5em 0; /* Reducción del padding vertical (antes era más grande) */
-  margin-bottom: 5em; /* Añadir espacio entre esta sección y el copyright */
+  padding: 40px 0; /* Reducción del padding vertical (originalmente era más grande) */
+  margin-bottom: 80px; /* Espacio considerable entre la sección y el footer */
 }
-
 #fh5co-started .overlay {
   z-index: 0;
   position: absolute;
@@ -2276,6 +2275,36 @@ h1, h2, h3, h4, h5, h6, figure {
 		flex-direction: column;
 	}
 	
+	#fh5co-started {
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 40px 0; /* Reducción del padding vertical (originalmente era más grande) */
+  margin-bottom: 80px; /* Espacio considerable entre la sección y el footer */
+}
+
+/* Asegurarse que haya suficiente espacio entre Lets Get Started y el copyright */
+.row.copyright {
+  padding-top: 40px;
+  margin-top: 60px;
+  position: relative;
+  clear: both;
+}
+
+/* Línea divisoria antes del copyright para mejor separación visual */
+.row.copyright::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background-color: #e6e6e6;
+}
+	
 	.save-note,
 	.clear-note {
 		width: 100%;
@@ -2283,7 +2312,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 	
 	.note-header {
-		flex-direction: column;
+																																																	flex-direction: column;
 		align-items: flex-start;
 		gap: 8px;
 	}
@@ -2738,2285 +2767,876 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 }
 
-/* ========================================
-   ESTILOS PARA SECCIÓN DE MATERIAS
-   ======================================== */
-
-#fh5co-courses {
-	padding: 80px 0;
-	background: #f8f9fa;
-}
-
-.subject-card {
-	background: #fff;
-	border-radius: 15px;
-	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-	margin-bottom: 30px;
-	overflow: hidden;
-	transition: all 0.3s ease;
-	border: 1px solid #e9ecef;
-	position: relative;
-}
-
-.subject-card:hover {
-	transform: translateY(-10px);
-	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.subject-card::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 4px;
-	background: linear-gradient(90deg, #667eea, #764ba2);
-	opacity: 0;
-	transition: opacity 0.3s ease;
-}
-
-.subject-card:hover::before {
-	opacity: 1;
-}
-
-.subject-header {
-	padding: 25px 20px;
-	color: #fff;
-	text-align: center;
-	position: relative;
-	overflow: hidden;
-}
-
-.subject-header::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-	z-index: 1;
-}
-
-.subject-header i {
-	font-size: 2.5em;
-	margin-bottom: 10px;
-	display: block;
-	position: relative;
-	z-index: 2;
-}
-
-.subject-header h3 {
-	margin: 0;
-	font-size: 1.4em;
-	font-weight: 600;
-	position: relative;
-	z-index: 2;
-}
-
-/* Colores específicos para cada materia - Paleta sutil */
-.lengua { background: linear-gradient(135deg, #6c7b7f 0%, #8a9394 100%); }
-.loc { background: linear-gradient(135deg, #a8a8a8 0%, #9b9b9b 100%); }
-.matematicas { background: linear-gradient(135deg, #7a8a99 0%, #8c9dad 100%); }
-.estadistica { background: linear-gradient(135deg, #869c8a 0%, #9bb09f 100%); }
-.geometria { background: linear-gradient(135deg, #9b8a87 0%, #b09d9a 100%); }
-.fisica { background: linear-gradient(135deg, #8a9b9b 0%, #9fadad 100%); }
-.quimica { background: linear-gradient(135deg, #9b9b8a 0%, #b0b09d 100%); }
-.biologia { background: linear-gradient(135deg, #8a9b87 0%, #9db09a 100%); }
-.ingles { background: linear-gradient(135deg, #9b9487 0%, #b0a89a 100%); }
-.informatica { background: linear-gradient(135deg, #7a7a99 0%, #8d8dad 100%); }
-.tecnica { background: linear-gradient(135deg, #99877a 0%, #ad9a8d 100%); }
-.musica { background: linear-gradient(135deg, #879999 0%, #9aadad 100%); }
-.artistica { background: linear-gradient(135deg, #99998a 0%, #adad9f 100%); }
-.edfisica { background: linear-gradient(135deg, #9b8799 0%, #b09aad 100%); }
-.sociales { background: linear-gradient(135deg, #8a8a9b 0%, #9d9db0 100%); }
-.catedrapaz { background: linear-gradient(135deg, #9b8a8a 0%, #b09d9d 100%); }
-.economia { background: linear-gradient(135deg, #8a9999 0%, #9dadad 100%); }
-.filosofia { background: linear-gradient(135deg, #99998a 0%, #adad9f 100%); }
-.religion { background: linear-gradient(135deg, #8a879b 0%, #9d9ab0 100%); }
-.etica { background: linear-gradient(135deg, #9b8a99 0%, #b09dad 100%); }
-
-.subject-content {
-	padding: 25px 20px;
-}
-
-.task-summary {
-	margin-bottom: 20px;
-	text-align: center;
-}
-
-.task-summary span {
-	display: block;
-	margin-bottom: 8px;
-	font-size: 0.9em;
-	font-weight: 500;
-}
-
-.pending-tasks {
-	color: #e74c3c;
-	background: #ffeaea;
-	padding: 5px 12px;
-	border-radius: 20px;
-	display: inline-block;
-}
-
-.completed-tasks {
-	color: #27ae60;
-	background: #eafaf1;
-	padding: 5px 12px;
-	border-radius: 20px;
-	display: inline-block;
-}
-
-.subject-actions {
-	display: flex;
-	gap: 10px;
-	justify-content: center;
-}
-
-.btn-action {
-	flex: 1;
-	padding: 10px 15px;
-	background: #f8f9fa;
-	color: #495057;
-	text-decoration: none;
-	border-radius: 8px;
-	text-align: center;
-	font-size: 0.9em;
-	font-weight: 500;
-	transition: all 0.3s ease;
-	border: 1px solid #dee2e6;
-}
-
-.btn-action:hover {
-	background: #007bff;
-	color: #fff;
-	text-decoration: none;
-	transform: translateY(-2px);
-	box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
-}
-
-/* Modal Styles */
-.modal {
-	display: none;
-	position: fixed;
-	z-index: 9999;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-	backdrop-filter: blur(5px);
-}
-
-.modal-content {
-	background-color: #fff;
-	margin: 5% auto;
-	padding: 0;
-	border-radius: 15px;
-	width: 90%;
-	max-width: 800px;
-	max-height: 80vh;
-	overflow-y: auto;
-	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-	animation: modalSlideIn 0.3s ease;
-}
-
-@keyframes modalSlideIn {
-	from {
-		opacity: 0;
-		transform: translateY(-50px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-.close {
-	color: #aaa;
-	float: right;
-	font-size: 28px;
-	font-weight: bold;
-	padding: 15px 20px;
-	cursor: pointer;
-	transition: color 0.3s ease;
-}
-
-.close:hover,
-.close:focus {
-	color: #000;
-}
-
-.modal-header {
-	padding: 25px 30px;
-	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-	color: #fff;
-	border-radius: 15px 15px 0 0;
-}
-
-.modal-header h2 {
-	margin: 0;
-	font-size: 1.8em;
-	font-weight: 600;
-}
-
-.modal-body {
-	padding: 30px;
-}
-
-.task-item {
-	background: #f8f9fa;
-	padding: 15px 20px;
-	margin-bottom: 15px;
-	border-radius: 10px;
-	border-left: 4px solid #007bff;
-	transition: all 0.3s ease;
-}
-
-.task-item:hover {
-	background: #e9ecef;
-	transform: translateX(5px);
-}
-
-.task-item h4 {
-	margin: 0 0 8px 0;
-	color: #2c3e50;
-	font-size: 1.1em;
-}
-
-.task-item p {
-	margin: 0 0 10px 0;
-	color: #6c757d;
-	font-size: 0.9em;
-}
-
-.task-meta {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 10px;
-}
-
-.task-status {
-	padding: 4px 12px;
-	border-radius: 15px;
-	font-size: 0.8em;
-	font-weight: 500;
-}
-
-.status-pending {
-	background: #ffeaa7;
-	color: #d63031;
-}
-
-.status-completed {
-	background: #55efc4;
-	color: #00b894;
-}
-
-.task-date {
-	color: #74b9ff;
-	font-size: 0.8em;
-	font-weight: 500;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-	.subject-card {
-		margin-bottom: 20px;
-	}
-	
-	.subject-actions {
-		flex-direction: column;
-	}
-	
-	.btn-action {
-		margin-bottom: 8px;
-	}
-	
-	.modal-content {
-		width: 95%;
-		margin: 10% auto;
-	}
-	
-	.modal-body {
-		padding: 20px;
-	}
-	
-	.task-meta {
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 8px;
-	}
-	
-	.student-info-card {
-		padding: 2em 1.5em;
-		margin-bottom: 2em;
-	}
-	
-	.student-name {
-		font-size: 1.8em;
-	}
-	
-	.academic-progress {
-		padding: 2em 1.5em;
-	}
-	
-	.period-card {
-		margin-bottom: 1.5em;
-	}
-	
-	.academic-summary {
-		padding: 2em 1.5em;
-	}
-}
-
-@media (max-width: 480px) {
-	.student-avatar {
-		width: 60px;
-		height: 60px;
-	}
-	
-	.student-avatar i {
-		font-size: 2em;
-	}
-	
-	.step-circle {
-		width: 50px;
-		height: 50px;
-		font-size: 1.1em;
-	}
-	
-	.average-score {
-		font-size: 2em;
-	}
-	
-	.subject-item {
-		padding: 0.6em 0;
-	}
-	
-	.subject-grade {
-		padding: 3px 8px;
-		font-size: 0.8em;
-		min-width: 40px;
-	}
-}
-
-/* ========================================
-   ESTILOS PARA SECCIÓN DE CALIFICACIONES DEL ESTUDIANTE
-   ======================================== */
-
-/* Sección principal de calificaciones del estudiante */
-#fh5co-student-grades {
-	padding: 7em 0;
-	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
-
-/* Información del estudiante */
-.student-info-card {
-	background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-	padding: 3em 2em;
-	border-radius: 20px;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-	margin-bottom: 3em;
-	border: 1px solid #e9ecef;
-}
-
-.student-avatar {
-	width: 80px;
-	height: 80px;
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0 auto 1em;
-	box-shadow: 0 8px 20px rgba(82, 211, 170, 0.3);
-}
-
-.student-avatar i {
-	font-size: 2.5em;
-	color: #fff;
-}
-
-.student-name {
-	color: #2c3e50;
-	font-size: 2.2em;
-	font-weight: 700;
-	margin-bottom: 0.5em;
-}
-
-.student-details {
-	color: #6c757d;
-	font-size: 1.1em;
-	margin-bottom: 1.5em;
-}
-
-.current-period-badge {
-	display: inline-block;
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	color: #fff;
-	padding: 8px 20px;
-	border-radius: 25px;
-	font-weight: 600;
-	font-size: 0.9em;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	box-shadow: 0 4px 15px rgba(82, 211, 170, 0.3);
-}
-
-/* Progreso académico */
-.academic-progress {
-	background: #fff;
-	padding: 2.5em;
-	border-radius: 15px;
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-	margin-bottom: 3em;
-	border: 1px solid #e9ecef;
-}
-
-.academic-progress h3 {
-	text-align: center;
-	color: #2c3e50;
-	font-size: 1.8em;
-	font-weight: 600;
-	margin-bottom: 2em;
-}
-
-/* Timeline de progreso */
-.progress-timeline {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	position: relative;
-	padding: 1em 0;
-}
-
-.progress-timeline::before {
-	content: '';
-	position: absolute;
-	top: 35px;
-	left: 12.5%;
-	right: 12.5%;
-	height: 3px;
-	background: linear-gradient(90deg, #52d3aa 0%, #52d3aa 50%, #dee2e6 50%, #dee2e6 100%);
-	z-index: 1;
-}
-
-.period-step {
-	text-align: center;
-	position: relative;
-	z-index: 2;
-	cursor: pointer;
-	transition: all 0.3s ease;
-}
-
-.period-step.pulse {
-	animation: pulse 0.6s ease-in-out;
-}
-
-@keyframes pulse {
-	0% { transform: scale(1); }
-	50% { transform: scale(1.1); }
-	100% { transform: scale(1); }
-}
-
-.step-circle {
-	width: 70px;
-	height: 70px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 1.4em;
-	font-weight: 700;
-	margin: 0 auto 0.5em;
-	transition: all 0.3s ease;
-}
-
-.period-step.completed .step-circle {
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	color: #fff;
-	box-shadow: 0 6px 20px rgba(82, 211, 170, 0.4);
-}
-
-.period-step.current .step-circle {
-	background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
-	color: #fff;
-	box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
-	animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-	from { box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4); }
-	to { box-shadow: 0 6px 25px rgba(255, 193, 7, 0.6); }
-}
-
-.period-step.locked .step-circle {
-	background: #dee2e6;
-	color: #6c757d;
-	box-shadow: none;
-}
-
-.step-label {
-	font-weight: 600;
-	color: #2c3e50;
-	margin-bottom: 0.3em;
-	font-size: 0.9em;
-}
-
-.step-status {
-	font-size: 0.8em;
-	color: #6c757d;
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
-}
-
-.period-step.current .step-status {
-	color: #ff9800;
-	font-weight: 600;
-}
-
-.period-step.completed .step-status {
-	color: #52d3aa;
-	font-weight: 600;
-}
-
-/* Grid de períodos */
-.periods-grid {
-	margin-bottom: 3em;
-}
-
-/* Tarjetas de período */
-.period-card {
-	background: #fff;
-	border-radius: 15px;
-	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-	margin-bottom: 2em;
-	overflow: hidden;
-	transition: all 0.3s ease;
-	border: 1px solid #e9ecef;
-	opacity: 0;
-}
-
-.period-card.hovered {
-	transform: translateY(-8px);
-	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-/* Período completado */
-.period-card.completed-period {
-	border-top: 4px solid #52d3aa;
-}
-
-.period-card.completed-period .period-header {
-	background: linear-gradient(135deg, #f0fdf7 0%, #dcfce7 100%);
-}
-
-/* Período actual */
-.period-card.current-period {
-	border-top: 4px solid #ffc107;
-	position: relative;
-}
-
-.period-card.current-period .period-header {
-	background: linear-gradient(135deg, #fffbf0 0%, #fef3c7 100%);
-}
-
-.current-badge {
-	position: absolute;
-	top: 15px;
-	right: 15px;
-	background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
-	color: #fff;
-	padding: 4px 12px;
-	border-radius: 12px;
-	font-size: 0.7em;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
-}
-
-/* Período bloqueado */
-.period-card.locked-period {
-	background: #f8f9fa;
-	border: 2px dashed #dee2e6;
-	opacity: 0.7;
-}
-
-.locked-content {
-	padding: 3em 2em;
-	text-align: center;
-}
-
-.lock-icon {
-	width: 60px;
-	height: 60px;
-	background: #dee2e6;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0 auto 1em;
-}
-
-.lock-icon i {
-	font-size: 1.5em;
-	color: #6c757d;
-}
-
-.lock-message {
-	color: #6c757d;
-	font-size: 1.1em;
-	margin-bottom: 1.5em;
-}
-
-.unlock-progress {
-	margin-top: 1.5em;
-}
-
-.unlock-progress span {
-	color: #495057;
-	font-weight: 600;
-	font-size: 0.9em;
-}
-
-.progress-bar {
-	width: 100%;
-	height: 8px;
-	background: #e9ecef;
-	border-radius: 10px;
-	margin-top: 0.5em;
-	overflow: hidden;
-}
-
-.progress-fill {
-	height: 100%;
-	background: linear-gradient(90deg, #52d3aa 0%, #4ade80 100%);
-	border-radius: 10px;
-	transition: width 0.3s ease;
-}
-
-/* Header de las tarjetas */
-.period-header {
-	padding: 1.5em;
-	position: relative;
-}
-
-.period-icon {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-bottom: 1em;
-}
-
-.completed-period .period-icon {
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	color: #fff;
-}
-
-.current-period .period-icon.current {
-	background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
-	color: #fff;
-}
-
-.period-header h3 {
-	color: #2c3e50;
-	font-size: 1.4em;
-	font-weight: 600;
-	margin-bottom: 0.5em;
-}
-
-.period-average {
-	display: flex;
-	align-items: baseline;
-	gap: 5px;
-}
-
-.average-score {
-	font-size: 2.5em;
-	font-weight: 700;
-	color: #2c3e50;
-}
-
-.max-score {
-	font-size: 1em;
-	color: #6c757d;
-}
-
-/* Cuerpo de las tarjetas */
-.period-body {
-	padding: 0 1.5em 1.5em;
-}
-
-.subjects-list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-.subject-item {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0.8em 0;
-	border-bottom: 1px solid #f1f3f4;
-}
-
-.subject-item:last-child {
-	border-bottom: none;
-}
-
-.subject-name {
-	color: #495057;
-	font-weight: 500;
-}
-
-.subject-grade {
-	padding: 4px 12px;
-	border-radius: 20px;
-	font-weight: 600;
-	font-size: 0.9em;
-	min-width: 45px;
-	text-align: center;
-}
-
-/* Colores de calificaciones */
-.subject-grade.excellent {
-	background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-	color: #065f46;
-}
-
-.subject-grade.good {
-	background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-	color: #1e40af;
-}
-
-.subject-grade.satisfactory {
-	background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-	color: #92400e;
-}
-
-.subject-grade.needs-improvement {
-	background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
-	color: #991b1b;
-}
-
-/* Footer de las tarjetas */
-.period-footer {
-	padding: 1em 1.5em;
-	border-top: 1px solid #f1f3f4;
-	background: #fafbfc;
-}
-
-.btn-view-details {
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	color: #fff;
-	border: none;
-	padding: 10px 20px;
-	border-radius: 25px;
-	font-weight: 600;
-	font-size: 0.9em;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	margin: 0 auto;
-}
-
-.btn-view-details:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 8px 20px rgba(82, 211, 170, 0.4);
-}
-
-/* Resumen académico */
-.academic-summary {
-	background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-	color: #fff;
-	padding: 3em 2em;
-	border-radius: 20px;
-	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-	margin-top: 3em;
-}
-
-.academic-summary h3 {
-	color: #fff;
-	text-align: center;
-	font-size: 2em;
-	font-weight: 600;
-	margin-bottom: 2em;
-}
-
-.summary-stats {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 2em;
-}
-
-.stat-card {
-	background: rgba(255, 255, 255, 0.1);
-	padding: 1.5em;
-	border-radius: 15px;
-	text-align: center;
-	backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	transition: all 0.3s ease;
-}
-
-.stat-card:hover {
-	background: rgba(255, 255, 255, 0.15);
-	transform: translateY(-5px);
-}
-
-.stat-icon {
-	width: 60px;
-	height: 60px;
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0 auto 1em;
-}
-
-.stat-icon i {
-	font-size: 1.5em;
-	color: #fff;
-}
-
-.stat-number {
-	display: block;
-	font-size: 2.2em;
-	font-weight: 700;
-	color: #52d3aa;
-	margin-bottom: 0.3em;
-}
-
-.stat-label {
-	color: #bdc3c7;
-	font-size: 0.9em;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-	.progress-timeline {
-		flex-direction: column;
-		gap: 2em;
-	}
-	
-	.progress-timeline::before {
-		display: none;
-	}
-	
-	.periods-grid [class*="col-md-"] {
-		margin-bottom: 2em;
-	}
-	
-	.summary-stats {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1.5em;
-	}
-}
-
-@media (max-width: 768px) {
-	#fh5co-student-grades {
-		padding: 4em 0;
-	}
-	
-	.student-info-card {
-		padding: 2em 1.5em;
-		margin-bottom: 2em;
-	}
-	
-	.student-name {
-		font-size: 1.8em;
-	}
-	
-	.academic-progress {
-		padding: 2em 1.5em;
-	}
-	
-	.period-card {
-		margin-bottom: 1.5em;
-	}
-	
-	.academic-summary {
-		padding: 2em 1.5em;
-	}
-	
-	.summary-stats {
-		grid-template-columns: 1fr;
-		gap: 1em;
-	}
-}
-
-@media (max-width: 480px) {
-	.student-avatar {
-		width: 60px;
-		height: 60px;
-	}
-	
-	.student-avatar i {
-		font-size: 2em;
-	}
-	
-	.step-circle {
-		width: 50px;
-		height: 50px;
-		font-size: 1.1em;
-	}
-	
-	.average-score {
-		font-size: 2em;
-	}
-	
-	.subject-item {
-		padding: 0.6em 0;
-	}
-	
-	.subject-grade {
-		padding: 3px 8px;
-		font-size: 0.8em;
-		min-width: 40px;
-	}
-}
-
-/* ========================================
-   ESTILOS PARA SECCIÓN DE CALIFICACIONES DEL ESTUDIANTE
-   ======================================== */
-
-/* Sección principal de calificaciones del estudiante */
-#fh5co-student-grades {
-	padding: 7em 0;
-	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
-
-/* Información del estudiante */
-.student-info-card {
-	background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-	padding: 3em 2em;
-	border-radius: 20px;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-	margin-bottom: 3em;
-	border: 1px solid #e9ecef;
-}
-
-.student-avatar {
-	width: 80px;
-	height: 80px;
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0 auto 1em;
-	box-shadow: 0 8px 20px rgba(82, 211, 170, 0.3);
-}
-
-.student-avatar i {
-	font-size: 2.5em;
-	color: #fff;
-}
-
-.student-name {
-	color: #2c3e50;
-	font-size: 2.2em;
-	font-weight: 700;
-	margin-bottom: 0.5em;
-}
-
-.student-details {
-	color: #6c757d;
-	font-size: 1.1em;
-	margin-bottom: 1.5em;
-}
-
-.current-period-badge {
-	display: inline-block;
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	color: #fff;
-	padding: 8px 20px;
-	border-radius: 25px;
-	font-weight: 600;
-	font-size: 0.9em;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	box-shadow: 0 4px 15px rgba(82, 211, 170, 0.3);
-}
-
-/* Progreso académico */
-.academic-progress {
-	background: #fff;
-	padding: 2.5em;
-	border-radius: 15px;
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-	margin-bottom: 3em;
-	border: 1px solid #e9ecef;
-}
-
-.academic-progress h3 {
-	text-align: center;
-	color: #2c3e50;
-	font-size: 1.8em;
-	font-weight: 600;
-	margin-bottom: 2em;
-}
-
-/* Timeline de progreso */
-.progress-timeline {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	position: relative;
-	padding: 1em 0;
-}
-
-.progress-timeline::before {
-	content: '';
-	position: absolute;
-	top: 35px;
-	left: 12.5%;
-	right: 12.5%;
-	height: 3px;
-	background: linear-gradient(90deg, #52d3aa 0%, #52d3aa 50%, #dee2e6 50%, #dee2e6 100%);
-	z-index: 1;
-}
-
-.period-step {
-	text-align: center;
-	position: relative;
-	z-index: 2;
-	cursor: pointer;
-	transition: all 0.3s ease;
-}
-
-.period-step.pulse {
-	animation: pulse 0.6s ease-in-out;
-}
-
-@keyframes pulse {
-	0% { transform: scale(1); }
-	50% { transform: scale(1.1); }
-	100% { transform: scale(1); }
-}
-
-.step-circle {
-	width: 70px;
-	height: 70px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 1.4em;
-	font-weight: 700;
-	margin: 0 auto 0.5em;
-	transition: all 0.3s ease;
-}
-
-.period-step.completed .step-circle {
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	color: #fff;
-	box-shadow: 0 6px 20px rgba(82, 211, 170, 0.4);
-}
-
-.period-step.current .step-circle {
-	background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
-	color: #fff;
-	box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
-	animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-	from { box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4); }
-	to { box-shadow: 0 6px 25px rgba(255, 193, 7, 0.6); }
-}
-
-.period-step.locked .step-circle {
-	background: #dee2e6;
-	color: #6c757d;
-	box-shadow: none;
-}
-
-.step-label {
-	font-weight: 600;
-	color: #2c3e50;
-	margin-bottom: 0.3em;
-	font-size: 0.9em;
-}
-
-.step-status {
-	font-size: 0.8em;
-	color: #6c757d;
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
-}
-
-.period-step.current .step-status {
-	color: #ff9800;
-	font-weight: 600;
-}
-
-.period-step.completed .step-status {
-	color: #52d3aa;
-	font-weight: 600;
-}
-
-/* Grid de períodos */
-.periods-grid {
-	margin-bottom: 3em;
-}
-
-/* Tarjetas de período */
-.period-card {
-	background: #fff;
-	border-radius: 15px;
-	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-	margin-bottom: 2em;
-	overflow: hidden;
-	transition: all 0.3s ease;
-	border: 1px solid #e9ecef;
-	opacity: 0;
-}
-
-.period-card.hovered {
-	transform: translateY(-8px);
-	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-/* Período completado */
-.period-card.completed-period {
-	border-top: 4px solid #52d3aa;
-}
-
-.period-card.completed-period .period-header {
-	background: linear-gradient(135deg, #f0fdf7 0%, #dcfce7 100%);
-}
-
-/* Período actual */
-.period-card.current-period {
-	border-top: 4px solid #ffc107;
-	position: relative;
-}
-
-.period-card.current-period .period-header {
-	background: linear-gradient(135deg, #fffbf0 0%, #fef3c7 100%);
-}
-
-.current-badge {
-	position: absolute;
-	top: 15px;
-	right: 15px;
-	background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
-	color: #fff;
-	padding: 4px 12px;
-	border-radius: 12px;
-	font-size: 0.7em;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
-}
-
-/* Período bloqueado */
-.period-card.locked-period {
-	background: #f8f9fa;
-	border: 2px dashed #dee2e6;
-	opacity: 0.7;
-}
-
-.locked-content {
-	padding: 3em 2em;
-	text-align: center;
-}
-
-.lock-icon {
-	width: 60px;
-	height: 60px;
-	background: #dee2e6;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0 auto 1em;
-}
-
-.lock-icon i {
-	font-size: 1.5em;
-	color: #6c757d;
-}
-
-.lock-message {
-	color: #6c757d;
-	font-size: 1.1em;
-	margin-bottom: 1.5em;
-}
-
-.unlock-progress {
-	margin-top: 1.5em;
-}
-
-.unlock-progress span {
-	color: #495057;
-	font-weight: 600;
-	font-size: 0.9em;
-}
-
-.progress-bar {
-	width: 100%;
-	height: 8px;
-	background: #e9ecef;
-	border-radius: 10px;
-	margin-top: 0.5em;
-	overflow: hidden;
-}
-
-.progress-fill {
-	height: 100%;
-	background: linear-gradient(90deg, #52d3aa 0%, #4ade80 100%);
-	border-radius: 10px;
-	transition: width 0.3s ease;
-}
-
-/* Header de las tarjetas */
-.period-header {
-	padding: 1.5em;
-	position: relative;
-}
-
-.period-icon {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-bottom: 1em;
-}
-
-.completed-period .period-icon {
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	color: #fff;
-}
-
-.current-period .period-icon.current {
-	background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
-	color: #fff;
-}
-
-.period-header h3 {
-	color: #2c3e50;
-	font-size: 1.4em;
-	font-weight: 600;
-	margin-bottom: 0.5em;
-}
-
-.period-average {
-	display: flex;
-	align-items: baseline;
-	gap: 5px;
-}
-
-.average-score {
-	font-size: 2.5em;
-	font-weight: 700;
-	color: #2c3e50;
-}
-
-.max-score {
-	font-size: 1em;
-	color: #6c757d;
-}
-
-/* Cuerpo de las tarjetas */
-.period-body {
-	padding: 0 1.5em 1.5em;
-}
-
-.subjects-list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-.subject-item {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0.8em 0;
-	border-bottom: 1px solid #f1f3f4;
-}
-
-.subject-item:last-child {
-	border-bottom: none;
-}
-
-.subject-name {
-	color: #495057;
-	font-weight: 500;
-}
-
-.subject-grade {
-	padding: 4px 12px;
-	border-radius: 20px;
-	font-weight: 600;
-	font-size: 0.9em;
-	min-width: 45px;
-	text-align: center;
-}
-
-/* Colores de calificaciones */
-.subject-grade.excellent {
-	background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-	color: #065f46;
-}
-
-.subject-grade.good {
-	background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-	color: #1e40af;
-}
-
-.subject-grade.satisfactory {
-	background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-	color: #92400e;
-}
-
-.subject-grade.needs-improvement {
-	background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
-	color: #991b1b;
-}
-
-/* Footer de las tarjetas */
-.period-footer {
-	padding: 1em 1.5em;
-	border-top: 1px solid #f1f3f4;
-	background: #fafbfc;
-}
-
-.btn-view-details {
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	color: #fff;
-	border: none;
-	padding: 10px 20px;
-	border-radius: 25px;
-	font-weight: 600;
-	font-size: 0.9em;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	margin: 0 auto;
-}
-
-.btn-view-details:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 8px 20px rgba(82, 211, 170, 0.4);
-}
-
-/* Resumen académico */
-.academic-summary {
-	background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-	color: #fff;
-	padding: 3em 2em;
-	border-radius: 20px;
-	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-	margin-top: 3em;
-}
-
-.academic-summary h3 {
-	color: #fff;
-	text-align: center;
-	font-size: 2em;
-	font-weight: 600;
-	margin-bottom: 2em;
-}
-
-.summary-stats {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 2em;
-}
-
-.stat-card {
-	background: rgba(255, 255, 255, 0.1);
-	padding: 1.5em;
-	border-radius: 15px;
-	text-align: center;
-	backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	transition: all 0.3s ease;
-}
-
-.stat-card:hover {
-	background: rgba(255, 255, 255, 0.15);
-	transform: translateY(-5px);
-}
-
-.stat-icon {
-	width: 60px;
-	height: 60px;
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0 auto 1em;
-}
-
-.stat-icon i {
-	font-size: 1.5em;
-	color: #fff;
-}
-
-.stat-number {
-	display: block;
-	font-size: 2.2em;
-	font-weight: 700;
-	color: #52d3aa;
-	margin-bottom: 0.3em;
-}
-
-.stat-label {
-	color: #bdc3c7;
-	font-size: 0.9em;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-	.progress-timeline {
-		flex-direction: column;
-		gap: 2em;
-	}
-	
-	.progress-timeline::before {
-		display: none;
-	}
-	
-	.periods-grid [class*="col-md-"] {
-		margin-bottom: 2em;
-	}
-	
-	.summary-stats {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1.5em;
-	}
-}
-
-@media (max-width: 768px) {
-	#fh5co-student-grades {
-		padding: 4em 0;
-	}
-	
-	.student-info-card {
-		padding: 2em 1.5em;
-		margin-bottom: 2em;
-	}
-	
-	.student-name {
-		font-size: 1.8em;
-	}
-	
-	.academic-progress {
-		padding: 2em 1.5em;
-	}
-	
-	.period-card {
-		margin-bottom: 1.5em;
-	}
-	
-	.academic-summary {
-		padding: 2em 1.5em;
-	}
-	
-	.summary-stats {
-		grid-template-columns: 1fr;
-		gap: 1em;
-	}
-}
-
-@media (max-width: 480px) {
-	.student-avatar {
-		width: 60px;
-		height: 60px;
-	}
-	
-	.student-avatar i {
-		font-size: 2em;
-	}
-	
-	.step-circle {
-		width: 50px;
-		height: 50px;
-		font-size: 1.1em;
-	}
-	
-	.average-score {
-		font-size: 2em;
-	}
-	
-	.subject-item {
-		padding: 0.6em 0;
-	}
-	
-	.subject-grade {
-		padding: 3px 8px;
-		font-size: 0.8em;
-		min-width: 40px;
-	}
-}
-
-/* ========================================
-   ESTILOS PARA SECCIÓN DE CALIFICACIONES DEL ESTUDIANTE
-   ======================================== */
-
-/* Sección principal de calificaciones del estudiante */
-#fh5co-student-grades {
-	padding: 7em 0;
-	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
-
-/* Información del estudiante */
-.student-info-card {
-	background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-	padding: 3em 2em;
-	border-radius: 20px;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-	margin-bottom: 3em;
-	border: 1px solid #e9ecef;
-}
-
-.student-avatar {
-	width: 80px;
-	height: 80px;
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0 auto 1em;
-	box-shadow: 0 8px 20px rgba(82, 211, 170, 0.3);
-}
-
-.student-avatar i {
-	font-size: 2.5em;
-	color: #fff;
-}
-
-.student-name {
-	color: #2c3e50;
-	font-size: 2.2em;
-	font-weight: 700;
-	margin-bottom: 0.5em;
-}
-
-.student-details {
-	color: #6c757d;
-	font-size: 1.1em;
-	margin-bottom: 1.5em;
-}
-
-.current-period-badge {
-	display: inline-block;
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	color: #fff;
-	padding: 8px 20px;
-	border-radius: 25px;
-	font-weight: 600;
-	font-size: 0.9em;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	box-shadow: 0 4px 15px rgba(82, 211, 170, 0.3);
-}
-
-/* Progreso académico */
-.academic-progress {
-	background: #fff;
-	padding: 2.5em;
-	border-radius: 15px;
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-	margin-bottom: 3em;
-	border: 1px solid #e9ecef;
-}
-
-.academic-progress h3 {
-	text-align: center;
-	color: #2c3e50;
-	font-size: 1.8em;
-	font-weight: 600;
-	margin-bottom: 2em;
-}
-
-/* Timeline de progreso */
-.progress-timeline {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	position: relative;
-	padding: 1em 0;
-}
-
-.progress-timeline::before {
-	content: '';
-	position: absolute;
-	top: 35px;
-	left: 12.5%;
-	right: 12.5%;
-	height: 3px;
-	background: linear-gradient(90deg, #52d3aa 0%, #52d3aa 50%, #dee2e6 50%, #dee2e6 100%);
-	z-index: 1;
-}
-
-.period-step {
-	text-align: center;
-	position: relative;
-	z-index: 2;
-	cursor: pointer;
-	transition: all 0.3s ease;
-}
-
-.period-step.pulse {
-	animation: pulse 0.6s ease-in-out;
-}
-
-@keyframes pulse {
-	0% { transform: scale(1); }
-	50% { transform: scale(1.1); }
-	100% { transform: scale(1); }
-}
-
-.step-circle {
-	width: 70px;
-	height: 70px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 1.4em;
-	font-weight: 700;
-	margin: 0 auto 0.5em;
-	transition: all 0.3s ease;
-}
-
-.period-step.completed .step-circle {
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	color: #fff;
-	box-shadow: 0 6px 20px rgba(82, 211, 170, 0.4);
-}
-
-.period-step.current .step-circle {
-	background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
-	color: #fff;
-	box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
-	animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-	from { box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4); }
-	to { box-shadow: 0 6px 25px rgba(255, 193, 7, 0.6); }
-}
-
-.period-step.locked .step-circle {
-	background: #dee2e6;
-	color: #6c757d;
-	box-shadow: none;
-}
-
-.step-label {
-	font-weight: 600;
-	color: #2c3e50;
-	margin-bottom: 0.3em;
-	font-size: 0.9em;
-}
-
-.step-status {
-	font-size: 0.8em;
-	color: #6c757d;
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
-}
-
-.period-step.current .step-status {
-	color: #ff9800;
-	font-weight: 600;
-}
-
-.period-step.completed .step-status {
-	color: #52d3aa;
-	font-weight: 600;
-}
-
-/* Grid de períodos */
-.periods-grid {
-	margin-bottom: 3em;
-}
-
-/* Tarjetas de período */
-.period-card {
-	background: #fff;
-	border-radius: 15px;
-	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-	margin-bottom: 2em;
-	overflow: hidden;
-	transition: all 0.3s ease;
-	border: 1px solid #e9ecef;
-	opacity: 0;
-}
-
-.period-card.hovered {
-	transform: translateY(-8px);
-	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-/* Período completado */
-.period-card.completed-period {
-	border-top: 4px solid #52d3aa;
-}
-
-.period-card.completed-period .period-header {
-	background: linear-gradient(135deg, #f0fdf7 0%, #dcfce7 100%);
-}
-
-/* Período actual */
-.period-card.current-period {
-	border-top: 4px solid #ffc107;
-	position: relative;
-}
-
-.period-card.current-period .period-header {
-	background: linear-gradient(135deg, #fffbf0 0%, #fef3c7 100%);
-}
-
-.current-badge {
-	position: absolute;
-	top: 15px;
-	right: 15px;
-	background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
-	color: #fff;
-	padding: 4px 12px;
-	border-radius: 12px;
-	font-size: 0.7em;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
-}
-
-/* Período bloqueado */
-.period-card.locked-period {
-	background: #f8f9fa;
-	border: 2px dashed #dee2e6;
-	opacity: 0.7;
-}
-
-.locked-content {
-	padding: 3em 2em;
-	text-align: center;
-}
-
-.lock-icon {
-	width: 60px;
-	height: 60px;
-	background: #dee2e6;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0 auto 1em;
-}
-
-.lock-icon i {
-	font-size: 1.5em;
-	color: #6c757d;
-}
-
-.lock-message {
-	color: #6c757d;
-	font-size: 1.1em;
-	margin-bottom: 1.5em;
-}
-
-.unlock-progress {
-	margin-top: 1.5em;
-}
-
-.unlock-progress span {
-	color: #495057;
-	font-weight: 600;
-	font-size: 0.9em;
-}
-
-.progress-bar {
-	width: 100%;
-	height: 8px;
-	background: #e9ecef;
-	border-radius: 10px;
-	margin-top: 0.5em;
-	overflow: hidden;
-}
-
-.progress-fill {
-	height: 100%;
-	background: linear-gradient(90deg, #52d3aa 0%, #4ade80 100%);
-	border-radius: 10px;
-	transition: width 0.3s ease;
-}
-
-/* Header de las tarjetas */
-.period-header {
-	padding: 1.5em;
-	position: relative;
-}
-
-.period-icon {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-bottom: 1em;
-}
-
-.completed-period .period-icon {
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	color: #fff;
-}
-
-.current-period .period-icon.current {
-	background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
-	color: #fff;
-}
-
-.period-header h3 {
-	color: #2c3e50;
-	font-size: 1.4em;
-	font-weight: 600;
-	margin-bottom: 0.5em;
-}
-
-.period-average {
-	display: flex;
-	align-items: baseline;
-	gap: 5px;
-}
-
-.average-score {
-	font-size: 2.5em;
-	font-weight: 700;
-	color: #2c3e50;
-}
-
-.max-score {
-	font-size: 1em;
-	color: #6c757d;
-}
-
-/* Cuerpo de las tarjetas */
-.period-body {
-	padding: 0 1.5em 1.5em;
-}
-
-.subjects-list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-.subject-item {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0.8em 0;
-	border-bottom: 1px solid #f1f3f4;
-}
-
-.subject-item:last-child {
-	border-bottom: none;
-}
-
-.subject-name {
-	color: #495057;
-	font-weight: 500;
-}
-
-.subject-grade {
-	padding: 4px 12px;
-	border-radius: 20px;
-	font-weight: 600;
-	font-size: 0.9em;
-	min-width: 45px;
-	text-align: center;
-}
-
-/* Colores de calificaciones */
-.subject-grade.excellent {
-	background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-	color: #065f46;
-}
-
-.subject-grade.good {
-	background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-	color: #1e40af;
-}
-
-.subject-grade.satisfactory {
-	background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-	color: #92400e;
-}
-
-.subject-grade.needs-improvement {
-	background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
-	color: #991b1b;
-}
-
-/* Footer de las tarjetas */
-.period-footer {
-	padding: 1em 1.5em;
-	border-top: 1px solid #f1f3f4;
-	background: #fafbfc;
-}
-
-.btn-view-details {
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	color: #fff;
-	border: none;
-	padding: 10px 20px;
-	border-radius: 25px;
-	font-weight: 600;
-	font-size: 0.9em;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	margin: 0 auto;
-}
-
-.btn-view-details:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 8px 20px rgba(82, 211, 170, 0.4);
-}
-
-/* Resumen académico */
-.academic-summary {
-	background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-	color: #fff;
-	padding: 3em 2em;
-	border-radius: 20px;
-	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-	margin-top: 3em;
-}
-
-.academic-summary h3 {
-	color: #fff;
-	text-align: center;
-	font-size: 2em;
-	font-weight: 600;
-	margin-bottom: 2em;
-}
-
-.summary-stats {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 2em;
-}
-
-.stat-card {
-	background: rgba(255, 255, 255, 0.1);
-	padding: 1.5em;
-	border-radius: 15px;
-	text-align: center;
-	backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	transition: all 0.3s ease;
-}
-
-.stat-card:hover {
-	background: rgba(255, 255, 255, 0.15);
-	transform: translateY(-5px);
-}
-
-.stat-icon {
-	width: 60px;
-	height: 60px;
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade80 100%);
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0 auto 1em;
-}
-
-.stat-icon i {
-	font-size: 1.5em;
-	color: #fff;
-}
-
-.stat-number {
-	display: block;
-	font-size: 2.2em;
-	font-weight: 700;
-	color: #52d3aa;
-	margin-bottom: 0.3em;
-}
-
-.stat-label {
-	color: #bdc3c7;
-	font-size: 0.9em;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-	.progress-timeline {
-		flex-direction: column;
-		gap: 2em;
-	}
-	
-	.progress-timeline::before {
-		display: none;
-	}
-	
-	.periods-grid [class*="col-md-"] {
-		margin-bottom: 2em;
-	}
-	
-	.summary-stats {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1.5em;
-	}
-}
-
-@media (max-width: 768px) {
-	#fh5co-student-grades {
-		padding: 4em 0;
-	}
-	
-	.student-info-card {
-		padding: 2em 1.5em;
-		margin-bottom: 2em;
-	}
-	
-	.student-name {
-		font-size: 1.8em;
-	}
-	
-	.academic-progress {
-		padding: 2em 1.5em;
-	}
-	
-	.period-card {
-		margin-bottom: 1.5em;
-	}
-	
-	.academic-summary {
-		padding: 2em 1.5em;
-	}
-	
-	.summary-stats {
-		grid-template-columns: 1fr;
-		gap: 1em;
-	}
-}
-
-@media (max-width: 480px) {
-	.student-avatar {
-		width: 60px;
-		height: 60px;
-	}
-	
-	.student-avatar i {
-		font-size: 2em;
-	}
-	
-	.step-circle {
-		width: 50px;
-		height: 50px;
-		font-size: 1.1em;
-	}
-	
-	.average-score {
-		font-size: 2em;
-	}
-	
-	.subject-item {
-		padding: 0.6em 0;
-	}
-	
-	.subject-grade {
-		padding: 3px 8px;
-		font-size: 0.8em;
-		min-width: 40px;
-	}
-}
-
-/* Animaciones de entrada mejoradas */
-@keyframes slideInFromLeft {
-	from {
-		opacity: 0;
-		transform: translateX(-100px);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-@keyframes slideInFromRight {
-	from {
-		opacity: 0;
-		transform: translateX(100px);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-.subject-card:nth-child(odd) {
-	animation: slideInFromLeft 0.6s ease forwards;
-}
-
-.subject-card:nth-child(even) {
-	animation: slideInFromRight 0.6s ease forwards;
-}
-
-/* Estilos para el cuadro/barra del título "Mis Materias" */
-.title-box-header {
+/* =======================================================
+*
+* 	Estilos para la página de calificaciones
+*
+* ======================================================= */
+.page-calificaciones #fh5co-student-grades {
+  padding: 7em 0;
+  background-color: #f9f9f9;
+}
+
+/* Estilos para la tarjeta de información del estudiante */
+.page-calificaciones .student-info-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3em;
   position: relative;
-  background: #f8f9fa;
-  padding: 50px 0;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  border-bottom: 3px solid #d9d9d9;
-  width: 100%;
-  max-width: 1140px; /* Mismo ancho que el contenedor principal */
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0;
-  padding-right: 0;
-  left: 0;
-  right: 0;
 }
 
-.title-box-header h2 {
-    position: relative;
-    margin: 0;
-    padding-bottom: 15px;
-    font-weight: 600;
-    color: #333;
-    text-align: center;
+.page-calificaciones .student-avatar {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-color: #EA9215;
+  border-radius: 50%;
+  color: white;
+  font-size: 40px;
+  line-height: 80px;
+  margin-bottom: 15px;
 }
 
-.title-box-header h2::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #d9d9d9;
+.page-calificaciones .student-name {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.5em;
 }
 
-.title-box-header p {
-    margin-top: 15px;
-    color: #666;
-    font-size: 20px;
+.page-calificaciones .student-details {
+  color: #777;
+  font-size: 18px;
+  margin-bottom: 1em;
 }
 
-/* Variante con barra horizontal superior e inferior de extremo a extremo */
-.title-with-bars {
-    position: relative;
-    padding: 15px 0;
-    width: 100%;
-    display: flex;
+.page-calificaciones .current-period-badge {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+/* Estilos para el progreso académico */
+.page-calificaciones .academic-progress {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3em;
+}
+
+.page-calificaciones .academic-progress h3 {
+  color: #333;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.page-calificaciones .progress-timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 2em 0;
+}
+
+.page-calificaciones .progress-timeline:before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  background-color: #e0e0e0;
+  top: 25px;
+  left: 60px;
+  right: 60px;
+  z-index: 1;
+}
+
+.page-calificaciones .period-step {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 25%;
+}
+
+.page-calificaciones .step-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  color: #777;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.page-calificaciones .period-step.completed .step-circle {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.page-calificaciones .period-step.current .step-circle {
+  background-color: #EA9215;
+  color: white;
+}
+
+.page-calificaciones .step-label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.page-calificaciones .step-status {
+  font-size: 14px;
+  color: #777;
+}
+
+.page-calificaciones .period-step.completed .step-status {
+  color: #4CAF50;
+}
+
+.page-calificaciones .period-step.current .step-status {
+  color: #EA9215;
+}
+
+.page-calificaciones .period-step.locked .step-circle {
+  background-color: #e0e0e0;
+  color: #999;
+}
+
+/* Estilos para las tarjetas de períodos */
+.page-calificaciones .periods-grid {
+  margin-bottom: 3em;
+}
+
+.page-calificaciones .period-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  opacity: 0; /* Inicialmente invisible para animación */
+}
+
+.page-calificaciones .period-card.hovered {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.page-calificaciones .period-header {
+  padding: 1.5em;
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.page-calificaciones .period-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+
+.page-calificaciones .period-icon.current {
+  background-color: #EA9215;
+}
+
+.page-calificaciones .period-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.page-calificaciones .period-average {
+  margin-top: 10px;
+}
+
+.page-calificaciones .average-score {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+.page-calificaciones .max-score {
+  color: #999;
+  font-size: 18px;
+}
+
+.page-calificaciones .current-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #EA9215;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.page-calificaciones .period-body {
+  padding: 1em;
+}
+
+.page-calificaciones .subjects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-calificaciones .subject-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.page-calificaciones .subject-item:last-child {
+  border-bottom: none;
+}
+
+.page-calificaciones .subject-name {
+  color: #555;
+}
+
+.page-calificaciones .subject-grade {
+  font-weight: bold;
+  width: 50px;
+  height: 30px;
+  border-radius: 15px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+}
+
+.page-calificaciones .subject-grade.excellent {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.page-calificaciones .subject-grade.good {
+  background-color: #2196F3;
+  color: white;
+}
+
+.page-calificaciones .subject-grade.satisfactory {
+  background-color: #FF9800;
+  color: white;
+}
+
+.page-calificaciones .subject-grade.needs-improvement {
+  background-color: #F44336;
+  color: white;
+}
+
+.page-calificaciones .period-footer {
+  padding: 1em;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.page-calificaciones .btn-view-details {
+  background-color: transparent;
+  border: 2px solid #EA9215;
+  color: #EA9215;
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page-calificaciones .btn-view-details:hover {
+  background-color: #EA9215;
+  color: white;
+}
+
+/* Estilos para período bloqueado */
+.page-calificaciones .locked-period {
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.page-calificaciones .locked-content {
+  padding: 3em 1em;
+}
+
+.page-calificaciones .lock-icon {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  color: #999;
+  font-size: 40px;
+  line-height: 80px;
+  margin-bottom: 15px;
+}
+
+.page-calificaciones .lock-message {
+  color: #777;
+  margin-bottom: 2em;
+  font-size: 18px;
+}
+
+.page-calificaciones .unlock-progress {
+  max-width: 300px;
+  margin: 0 auto;
+  color: #777;
+}
+
+.page-calificaciones .progress-bar {
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.page-calificaciones .progress-fill {
+  height: 100%;
+  background-color: #EA9215;
+}
+
+/* Estilos para el resumen académico */
+.page-calificaciones .academic-summary {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.page-calificaciones .academic-summary h3 {
+  color: #333;
+  margin-bottom: 1.5em;
+}
+
+.page-calificaciones .summary-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.page-calificaciones .stat-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5em;
+  text-align: center;
+  width: calc(25% - 20px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.page-calificaciones .stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.page-calificaciones .stat-icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: #EA9215;
+  border-radius: 50%;
+  color: white;
+  font-size: 30px;
+  line-height: 60px;
+  margin-bottom: 15px;
+}
+
+.page-calificaciones .stat-number {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.page-calificaciones .stat-label {
+  color: #777;
+  font-size: 16px;
+}
+
+/* Efectos de animación */
+.page-calificaciones .pulse {
+  animation: pulse-animation 0.6s ease-out;
+}
+
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Ajustes específicos para la sección fh5co-started */
+.page-calificaciones #fh5co-started {
+  padding-top: 6em;
+  padding-bottom: 6em;
+  margin-bottom: 0;
+}
+
+/* Media queries para responsividad */
+@media screen and (max-width: 768px) {
+  .page-calificaciones .progress-timeline:before {
+    left: 20px;
+    right: 20px;
+  }
+  
+  .page-calificaciones .stat-card {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .page-calificaciones .period-card {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page-calificaciones .progress-timeline {
     flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .page-calificaciones .progress-timeline:before {
+    display: none;
+  }
+  
+  .page-calificaciones .period-step {
+    display: flex;
     align-items: center;
-}
-
-.title-with-bars::before,
-.title-with-bars::after {
-    content: '';
-    position: absolute;
     width: 100%;
-    height: 2px;
-    background-color: #d9d9d9;
-}
-
-.title-with-bars::before {
-    top: 0;
-}
-
-.title-with-bars::after {
-    bottom: 0;
-}
-
-.title-with-bars h2 {
-    margin: 5;
-    padding: 15px 0;
-    font-weight: 600;
-}
-
-/* Mejoras para las barras horizontales del título */
-.full-width-divider {
-    position: relative;
-    overflow: hidden;
+    margin-bottom: 15px;
+  }
+  
+  .page-calificaciones .step-circle {
+    margin: 0 15px 0 0;
+  }
+  
+  .page-calificaciones .stat-card {
     width: 100%;
-    padding: 15px 0;
+  }
 }
 
-.full-width-divider::before, 
-.full-width-divider::after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    background-color: #d9d9d9;
-    left: 0;
-    right: 0;
-    width: 100%; 
+/* =======================================================
+*
+* 	Estilos para la página de cursos
+*
+* ======================================================= */
+.page-cursos #fh5co-started {
+  padding-top: 5em;
+  padding-bottom: 5em;
+  margin-bottom: 0;
 }
 
-.full-width-divider::before {
-    top: 0;
+.page-cursos #fh5co-started .fh5co-heading {
+  margin-bottom: 3em;
 }
 
-.full-width-divider::after {
-    bottom: 0;
+.page-cursos #fh5co-started h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
 }
 
-/* Media queries para responsividad mejorada */
-@media (max-width: 768px) {
-    .full-width-divider {
-        padding: 12px 0;
-    }
+.page-cursos #fh5co-started p {
+  font-size: 18px;
+  line-height: 1.7;
 }
 
-/* Estilos para la sección de calificaciones del estudiante */
-#fh5co-student-grades {
-	padding: 7em 0;
-	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+.page-cursos .footer-spacer {
+  height: 60px;
 }
 
-/* Información del estudiante */
-.student-info-card {
-	background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-	padding: 3em 2em;
-	border-radius: 20px;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-	margin-bottom: 3em;
-	border: 1px solid #e9ecef;
+.page-cursos .row.copyright {
+  margin-top: 30px;
 }
 
-.student-avatar {
-	width: 80px;
-	height: 80px;
-	background: linear-gradient(135deg, #52d3aa 0%, #4ade
+/* Media queries para responsividad en la página de cursos */
+@media screen and (max-width: 768px) {
+  .page-cursos #fh5co-started {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+  
+  .page-cursos #fh5co-started .fh5co-heading {
+    margin-bottom: 2em;
+  }
+  
+  .page-cursos #fh5co-started h2 {
+    font-size: 28px;
+  }
+  
+  .page-cursos .footer-spacer {
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page-cursos #fh5co-started {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+  
+  .page-cursos #fh5co-started h2 {
+    font-size: 24px;
+  }
+  
+  .page-cursos .footer-spacer {
+    height: 30px;
+  }
+}
+
+/* Estilos específicos para la sección "Lets Get Started" en la página de cursos */
+
+/* =======================================================
+*
+* 	Estilos adicionales para la página de cursos - Sección de materias
+*
+* ======================================================= */
+
+/* Título destacado para la sección de cursos */
+.page-cursos .title-box-header {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.page-cursos .title-with-bars {
+  display: inline-block;
+  position: relative;
+  padding: 1em 2em;
+  background-color: #EA9215;
+  color: white;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+.page-cursos .title-with-bars:before,
+.page-cursos .title-with-bars:after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background-color: #EA9215;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.page-cursos .title-with-bars:before {
+  left: -80px;
+}
+
+.page-cursos .title-with-bars:after {
+  right: -80px;
+}
+
+.page-cursos .title-box-header p {
+  color: #777;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Contenedor de filtros */
+.page-cursos .filters-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5em;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2em;
+}
+
+.page-cursos .filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.page-cursos .filter-pill {
+  background-color: #f5f5f5;
+  border: 2px solid transparent;
+  color: #666;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.page-cursos .filter-pill:hover,
+.page-cursos .filter-pill.active {
+  background-color: #EA9215;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Grid de materias compacto */
+.page-cursos .subjects-compact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 2em;
+}
+
+.page-cursos .subject-compact {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-cursos .subject-compact:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.page-cursos .subject-compact::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #EA9215;
+}
+
+/* Iconos de materias */
+.page-cursos .subject-icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #EA9215;
+  flex-shrink: 0;
+}
+
+.page-cursos .notification-dot {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff4757;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Información de la materia */
+.page-cursos .subject-info {
+  flex: 1;
+}
+
+.page-cursos .subject-info h4 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.page-cursos .subject-info p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+/* Acciones rápidas */
+.page-cursos .subject-quick-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.page-cursos .quick-btn {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #666;
+  font-size: 16px;
+}
+
+.page-cursos .quick-btn:hover {
+  background-color: #EA9215;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Colores específicos para cada materia */
+.page-cursos .subject-compact.lengua::before { background-color: #e74c3c; }
+.page-cursos .subject-compact.matematicas::before { background-color: #3498db; }
+.page-cursos .subject-compact.ingles::before { background-color: #9b59b6; }
+.page-cursos .subject-compact.fisica::before { background-color: #f39c12; }
+.page-cursos .subject-compact.quimica::before { background-color: #2ecc71; }
+.page-cursos .subject-compact.biologia::before { background-color: #27ae60; }
+.page-cursos .subject-compact.loc::before { background-color: #e67e22; }
+.page-cursos .subject-compact.estadistica::before { background-color: #34495e; }
+.page-cursos .subject-compact.geometria::before { background-color: #16a085; }
+.page-cursos .subject-compact.informatica::before { background-color: #2c3e50; }
+.page-cursos .subject-compact.tecnica::before { background-color: #95a5a6; }
+.page-cursos .subject-compact.musica::before { background-color: #8e44ad; }
+.page-cursos .subject-compact.artistica::before { background-color: #d35400; }
+.page-cursos .subject-compact.edfisica::before { background-color: #c0392b; }
+.page-cursos .subject-compact.sociales::before { background-color: #f1c40f; }
+.page-cursos .subject-compact.catedrapaz::before { background-color: #1abc9c; }
+.page-cursos .subject-compact.economia::before { background-color: #2980b9; }
+.page-cursos .subject-compact.filosofia::before { background-color: #7f8c8d; }
+.page-cursos .subject-compact.religion::before { background-color: #9b59b6; }
+.page-cursos .subject-compact.etica::before { background-color: #e91e63; }
+
+/* Modal para detalles de materias */
+.page-cursos .modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease;
+}
+
+.page-cursos .modal-content {
+  background-color: #ffffff;
+  margin: 5% auto;
+  padding: 2em;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.page-cursos .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.page-cursos .close:hover {
+  color: #333;
+}
+
+/* Responsivo para la página de cursos */
+@media screen and (max-width: 768px) {
+  .page-cursos .title-with-bars:before,
+  .page-cursos .title-with-bars:after {
+    display: none;
+  }
+  
+  .page-cursos .subjects-compact-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .page-cursos .subject-compact {
+    padding: 1em;
+  }
+  
+  .page-cursos .subject-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .page-cursos .modal-content {
+    margin: 10% auto;
+    padding: 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page-cursos .filter-pills {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  .page-cursos .filter-pill {
+    flex-shrink: 0;
+  }
+  
+  .page-cursos .subject-compact {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .page-cursos .subject-quick-actions {
+    justify-content: center;
+  }
+}
