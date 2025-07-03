@@ -782,7 +782,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #000;
 }
 .fh5co-heading p {
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.5;
   color: #828282;
 }
@@ -955,8 +955,8 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative;
   float: left;
   width: 100%;
-  padding: 40px 0; /* Reducción del padding vertical (originalmente era más grande) */
-  margin-bottom: 80px; /* Espacio considerable entre la sección y el footer */
+  padding: 100px 50; /* Reducción del padding vertical (originalmente era más grande) */
+  margin-bottom: 0px; /* Espacio considerable entre la sección y el footer */
 }
 #fh5co-started .overlay {
   z-index: 0;
@@ -1002,7 +1002,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background: rgba(255, 255, 255, 0.3);
 }
 #fh5co-started .btn {
-  height: 54px;
+  height: 58px;
   border: none !important;
   background: #EA9215;
   color: #fff;
@@ -2312,7 +2312,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 	
 	.note-header {
-																																																	flex-direction: column;
+																																																																	flex-direction: column;
 		align-items: flex-start;
 		gap: 8px;
 	}
@@ -3653,4 +3653,14 @@ h1, h2, h3, h4, h5, h6, figure {
     font-size: 18px;
     padding: 0.5em 1.2em;
   }
+}
+
+/* Ajustar la posición del botón en la sección "Desbloquea Tu Potencial Académico" */
+#fh5co-started .row:nth-child(3) {
+	margin-top: -40px; /* Subir el botón 40px hacia arriba */
+}
+
+/* Alternativamente, puedes reducir el margen inferior del texto */
+#fh5co-started .fh5co-heading {
+	margin-bottom: 1.5em; /* Reducir el espacio entre el texto y el botón (originalmente 5em) */
 }
