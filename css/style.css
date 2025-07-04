@@ -325,7 +325,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .fh5co-cover {
-  height: 800px;
+  height: 950px; /* Reducido de 1000px a 950px para un mejor equilibrio */
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -340,7 +340,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
 }
 .fh5co-cover > .fh5co-container {
   position: relative;
@@ -348,13 +348,13 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover {
-    height: 600px;
+    height: 750px; /* Reducido de 800px a 750px para móvil */
   }
 }
 .fh5co-cover .display-t,
 .fh5co-cover .display-tc {
   z-index: 9;
-  height: 700px;
+  height: 850px; /* Reducido de 900px a 850px para coincidir con la nueva altura */
   display: table;
   width: 100%;
   margin-top: 100px;
@@ -362,27 +362,27 @@ h1, h2, h3, h4, h5, h6, figure {
 @media screen and (max-width: 768px) {
   .fh5co-cover .display-t,
   .fh5co-cover .display-tc {
-    height: 600px;
+    height: 750px; /* Reducido de 800px a 750px para móvil */
   }
 }
 .fh5co-cover.fh5co-cover-sm {
-  height: 710px;
+  height: 900px; /* Reducido de 950px a 900px para un mejor equilibrio */
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover.fh5co-cover-sm {
-    height: 510px;
+    height: 700px; /* Reducido de 750px a 700px para móvil */
   }
 }
 .fh5co-cover.fh5co-cover-sm .display-t,
 .fh5co-cover.fh5co-cover-sm .display-tc {
-  height: 710px;
+  height: 900px; /* Reducido de 950px a 900px para coincidir con la nueva altura */
   display: table;
   width: 100%;
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover.fh5co-cover-sm .display-t,
   .fh5co-cover.fh5co-cover-sm .display-tc {
-    height: 510px;
+    height: 700px; /* Reducido de 750px a 700px para móvil */
   }
 }
 
@@ -785,6 +785,10 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 22px;
   line-height: 1.5;
   color: #828282;
+  max-width: 900px;
+  margin-left: 50;
+  margin-right: 20;
+  width: 100%;
 }
 .fh5co-heading span {
   display: block;
