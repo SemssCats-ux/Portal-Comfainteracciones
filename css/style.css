@@ -3525,7 +3525,7 @@ h1, h2, h3, h4, h5, h6, figure {
   transform: scale(1.1);
 }
 
-/* Colores específicos para cada materia */
+/* Colores específicos para cada sección de materia */
 .page-cursos .subject-compact.lengua::before { background-color: #e74c3c; }
 .page-cursos .subject-compact.matematicas::before { background-color: #3498db; }
 .page-cursos .subject-compact.ingles::before { background-color: #9b59b6; }
@@ -3659,12 +3659,58 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
-/* Ajustar la posición del botón en la sección "Desbloquea Tu Potencial Académico" */
-#fh5co-started .row:nth-child(3) {
-	margin-top: -40px; /* Subir el botón 40px hacia arriba */
+/* Ajuste específico para el posicionamiento del contenido en la página de cursos */
+.page-cursos .fh5co-cover .display-tc {
+  vertical-align: top;
+  padding-top: 0;
+  margin-top: -25%; /* Sube el contenido muy arriba usando margen negativo */
+  transform: translateY(-100px); /* Fuerza el contenido hacia arriba */
+  position: relative;
+  z-index: 10;
 }
 
-/* Alternativamente, puedes reducir el margen inferior del texto */
-#fh5co-started .fh5co-heading {
-	margin-bottom: 1.5em; /* Reducir el espacio entre el texto y el botón (originalmente 5em) */
+/* Ajuste para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .page-cursos .fh5co-cover .display-tc {
+    padding-top: 0;
+    margin-top: -20%; /* Menos margen negativo en móvil */
+    transform: translateY(-60px); /* Menos transform en móvil */
+  }
+}
+
+/* Ajuste específico para zoom - mantiene la posición relativa */
+@media screen and (min-width: 1200px) {
+  .page-cursos .fh5co-cover .display-tc {
+    padding-top: 0;
+    margin-top: -30%; /* Más margen negativo para pantallas grandes */
+    transform: translateY(-120px); /* Más transform para pantallas grandes */
+  }
+}
+
+/* Ajuste específico para subir el contenido en la página principal (index) */
+.fh5co-cover:not(.fh5co-cover-sm) .display-tc {
+  vertical-align: middle !important; /* Centro vertical absoluto */
+  padding-top: 0 !important; /* Sin padding para centrado perfecto */
+  margin-top: -15% !important; /* Sube considerablemente más para lograr centrado */
+  transform: none !important; /* Sin transformación */
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* Ajuste para dispositivos móviles en página principal */
+@media screen and (max-width: 768px) {
+  .fh5co-cover:not(.fh5co-cover-sm) .display-tc {
+    padding-top: 0 !important;
+    margin-top: -10% !important;
+    transform: none !important;
+  }
+}
+
+/* Ajuste para pantallas grandes en página principal */
+@media screen and (min-width: 1200px) {
+  .fh5co-cover:not(.fh5co-cover-sm) .display-tc {
+    padding-top: 0 !important;
+    margin-top: -18% !important;
+    transform: none !important;
+  }
 }
