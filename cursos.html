@@ -121,6 +121,9 @@
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>Tus Cursos</h1>
 							<h2>¡Estás haciendo un gran trabajo!<a target="_blank"></a><a target="_blank"> Mantente organizado</a> y alcanza todas tus metas academicas"</h2>
+							<div class="cursos-quick-actions">
+								<p><a class="btn btn-primary btn-lg btn-learn" href="#tareas-pendientes">Tareas Pendientes</a> <a class="btn btn-primary btn-lg btn-video" href="#entregas-pendientes"><i class="icon-clock"></i> Entregas Pendientes</a></p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -561,6 +564,111 @@
 			<span class="close" onclick="closeModal()">&times;</span>
 			<div id="modalContent">
 				<!-- El contenido se cargará dinámicamente -->
+			</div>
+		</div>
+	</div>
+
+	<!-- Sección de Tareas Pendientes -->
+	<div id="tareas-pendientes" class="fh5co-bg-section">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Tareas Pendientes</h2>
+					<p>Revisa todas tus tareas pendientes organizadas por fecha de entrega y prioridad.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="tareas-pendientes-container">
+						<div class="tarea-item urgente">
+							<div class="tarea-subject">Matemáticas</div>
+							<div class="tarea-title">Ejercicios de Cálculo Integral</div>
+							<div class="tarea-fecha">Vence: 10 de Julio, 2025</div>
+							<div class="tarea-actions">
+								<button class="btn btn-primary btn-sm">Ver Detalles</button>
+								<button class="btn btn-success btn-sm">Entregar</button>
+							</div>
+						</div>
+						<div class="tarea-item media">
+							<div class="tarea-subject">Química</div>
+							<div class="tarea-title">Laboratorio de Reacciones Químicas</div>
+							<div class="tarea-fecha">Vence: 12 de Julio, 2025</div>
+							<div class="tarea-actions">
+								<button class="btn btn-primary btn-sm">Ver Detalles</button>
+								<button class="btn btn-success btn-sm">Entregar</button>
+							</div>
+						</div>
+						<div class="tarea-item normal">
+							<div class="tarea-subject">Física</div>
+							<div class="tarea-title">Problemas de Mecánica Cuántica</div>
+							<div class="tarea-fecha">Vence: 15 de Julio, 2025</div>
+							<div class="tarea-actions">
+								<button class="btn btn-primary btn-sm">Ver Detalles</button>
+								<button class="btn btn-success btn-sm">Entregar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Sección de Entregas Pendientes -->
+	<div id="entregas-pendientes" class="fh5co-bg-section">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Entregas Pendientes</h2>
+					<p>Gestiona tus trabajos y proyectos que están próximos a vencer.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="entregas-pendientes-container">
+						<div class="entrega-item urgente">
+							<div class="entrega-subject">Biología</div>
+							<div class="entrega-title">Proyecto Final: Ecosistemas Colombianos</div>
+							<div class="entrega-fecha">Vence: 9 de Julio, 2025</div>
+							<div class="entrega-progress">
+								<div class="progress">
+									<div class="progress-bar" style="width: 75%">75%</div>
+								</div>
+							</div>
+							<div class="entrega-actions">
+								<button class="btn btn-warning btn-sm">Continuar</button>
+								<button class="btn btn-success btn-sm">Entregar</button>
+							</div>
+						</div>
+						<div class="entrega-item media">
+							<div class="entrega-subject">Lengua</div>
+							<div class="entrega-title">Ensayo Argumentativo</div>
+							<div class="entrega-fecha">Vence: 14 de Julio, 2025</div>
+							<div class="entrega-progress">
+								<div class="progress">
+									<div class="progress-bar" style="width: 40%">40%</div>
+								</div>
+							</div>
+							<div class="entrega-actions">
+								<button class="btn btn-warning btn-sm">Continuar</button>
+								<button class="btn btn-success btn-sm">Entregar</button>
+							</div>
+						</div>
+						<div class="entrega-item normal">
+							<div class="entrega-subject">Estadística</div>
+							<div class="entrega-title">Análisis de Datos Estadísticos</div>
+							<div class="entrega-fecha">Vence: 20 de Julio, 2025</div>
+							<div class="entrega-progress">
+								<div class="progress">
+									<div class="progress-bar" style="width: 20%">20%</div>
+								</div>
+							</div>
+							<div class="entrega-actions">
+								<button class="btn btn-warning btn-sm">Continuar</button>
+								<button class="btn btn-success btn-sm">Entregar</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

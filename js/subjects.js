@@ -480,7 +480,70 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Configurar búsqueda
     setupSearchEvents();
+    
+    // Botones de acceso rápido
+    const tareasPendientesBtn = document.querySelector('a[href="#tareas-pendientes"]');
+    const entregasPendientesBtn = document.querySelector('a[href="#entregas-pendientes"]');
+    
+    if (tareasPendientesBtn) {
+        tareasPendientesBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            smoothScrollTo('#tareas-pendientes');
+        });
+    }
+    
+    if (entregasPendientesBtn) {
+        entregasPendientesBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            smoothScrollTo('#entregas-pendientes');
+        });
+    }
+    
+    // Funcionalidad para botones de tareas pendientes
+    const tareaButtons = document.querySelectorAll('.tarea-item .btn');
+    tareaButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const action = this.textContent.trim();
+            const tareaTitle = this.closest('.tarea-item').querySelector('.tarea-title').textContent;
+            
+            if (action === 'Ver Detalles') {
+                // Mostrar modal con detalles de la tarea
+                showTaskDetails(tareaTitle);
+            } else if (action === 'Entregar') {
+                // Abrir modal de entrega
+                showSubmissionModal(tareaTitle);
+            }
+        });
+    });
+    
+    // Funcionalidad para botones de entregas pendientes
+    const entregaButtons = document.querySelectorAll('.entrega-item .btn');
+    entregaButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const action = this.textContent.trim();
+            const entregaTitle = this.closest('.entrega-item').querySelector('.entrega-title').textContent;
+            
+            if (action === 'Continuar') {
+                // Redirigir a la página de trabajo
+                continueWork(entregaTitle);
+            } else if (action === 'Entregar') {
+                // Abrir modal de entrega final
+                showFinalSubmissionModal(entregaTitle);
+            }
+        });
+    });
 });
+
+// Función para navegación suave a las secciones
+function smoothScrollTo(target) {
+    const element = document.querySelector(target);
+    if (element) {
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
 
 // Configurar eventos de filtros
 function setupFilterEvents() {
@@ -563,3 +626,24 @@ function updateTaskCounters() {
 
 // Actualizar contadores cada 5 minutos
 setInterval(updateTaskCounters, 300000);
+
+// Funciones auxiliares para manejar las acciones
+function showTaskDetails(taskTitle) {
+    alert(`Mostrando detalles de la tarea: ${taskTitle}`);
+    // Aquí se implementaría el modal con detalles completos
+}
+
+function showSubmissionModal(taskTitle) {
+    alert(`Abriendo modal de entrega para: ${taskTitle}`);
+    // Aquí se implementaría el modal de entrega
+}
+
+function continueWork(workTitle) {
+    alert(`Continuando trabajo en: ${workTitle}`);
+    // Aquí se redirigiría a la página de trabajo específica
+}
+
+function showFinalSubmissionModal(workTitle) {
+    alert(`Abriendo modal de entrega final para: ${workTitle}`);
+    // Aquí se implementaría el modal de entrega final
+}

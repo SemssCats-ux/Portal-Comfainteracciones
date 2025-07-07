@@ -3628,3 +3628,173 @@ h1, h2, h3, h4, h5, h6, figure {
     transform: none !important;
   }
 }
+
+/* Estilos para los botones de acceso rápido en la sección de cursos */
+.cursos-quick-actions {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.cursos-quick-actions .btn {
+	margin: 0 10px;
+	padding: 15px 30px;
+	border-radius: 30px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cursos-quick-actions .btn-learn {
+	background: #f39c12;
+	border: 2px solid #f39c12;
+	color: #fff;
+}
+
+.cursos-quick-actions .btn-learn:hover,
+.cursos-quick-actions .btn-learn:focus {
+	background: #e67e22;
+	border-color: #e67e22;
+	color: #fff;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.cursos-quick-actions .btn-video {
+	background: rgba(255, 255, 255, 0.1);
+	border: 2px solid rgba(255, 255, 255, 0.8);
+	color: #fff;
+	backdrop-filter: blur(5px);
+}
+
+.cursos-quick-actions .btn-video:hover,
+.cursos-quick-actions .btn-video:focus {
+	background: rgba(255, 255, 255, 0.2);
+	border-color: #fff;
+	color: #fff;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.cursos-quick-actions .btn-video i {
+	margin-right: 8px;
+}
+
+/* Responsive para los botones */
+@media screen and (max-width: 768px) {
+	.cursos-quick-actions .btn {
+		display: block;
+		margin: 10px auto;
+		width: 80%;
+		text-align: center;
+	}
+}
+
+/* Estilos para las secciones de Tareas y Entregas Pendientes */
+.tareas-pendientes-container,
+.entregas-pendientes-container {
+	margin-top: 30px;
+}
+
+.tarea-item,
+.entrega-item {
+	background: #fff;
+	border-radius: 8px;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+	border-left: 4px solid #ddd;
+	transition: all 0.3s ease;
+}
+
+.tarea-item:hover,
+.entrega-item:hover {
+	box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+	transform: translateY(-2px);
+}
+
+.tarea-item.urgente,
+.entrega-item.urgente {
+	border-left-color: #e74c3c;
+}
+
+.tarea-item.media,
+.entrega-item.media {
+	border-left-color: #f39c12;
+}
+
+.tarea-item.normal,
+.entrega-item.normal {
+	border-left-color: #27ae60;
+}
+
+.tarea-subject,
+.entrega-subject {
+	font-size: 12px;
+	font-weight: 600;
+	color: #7f8c8d;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 5px;
+}
+
+.tarea-title,
+.entrega-title {
+	font-size: 18px;
+	font-weight: 600;
+	color: #2c3e50;
+	margin-bottom: 10px;
+}
+
+.tarea-fecha,
+.entrega-fecha {
+	font-size: 14px;
+	color: #7f8c8d;
+	margin-bottom: 15px;
+}
+
+.tarea-actions,
+.entrega-actions {
+	display: flex;
+	gap: 10px;
+	justify-content: flex-end;
+}
+
+.entrega-progress {
+	margin-bottom: 15px;
+}
+
+.entrega-progress .progress {
+	height: 8px;
+	background-color: #ecf0f1;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.entrega-progress .progress-bar {
+	height: 100%;
+	background-color: #3498db;
+	border-radius: 4px;
+	transition: width 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 11px;
+	font-weight: 600;
+	color: #fff;
+}
+
+/* Responsive para las secciones de tareas y entregas */
+@media screen and (max-width: 768px) {
+	.tarea-actions,
+	.entrega-actions {
+		flex-direction: column;
+		gap: 5px;
+	}
+	
+	.tarea-actions .btn,
+	.entrega-actions .btn {
+		width: 100%;
+	}
+}
