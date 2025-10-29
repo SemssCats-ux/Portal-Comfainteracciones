@@ -121,6 +121,9 @@
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>Tus Cursos</h1>
 							<h2>¡Estás haciendo un gran trabajo!<a target="_blank"></a><a target="_blank"> Mantente organizado</a> y alcanza todas tus metas academicas"</h2>
+							<div class="cursos-quick-actions">
+								<p><a class="btn btn-primary btn-lg btn-learn" href="#tareas-pendientes">Tareas Pendientes</a> <a class="btn btn-primary btn-lg btn-video" href="#entregas-pendientes"><i class="icon-clock"></i> Entregas Pendientes</a></p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -564,6 +567,111 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Sección de Tareas Pendientes -->
+	<div id="tareas-pendientes" class="fh5co-bg-section">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Tareas Pendientes</h2>
+					<p>Revisa todas tus tareas pendientes organizadas por fecha de entrega y prioridad.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="tareas-pendientes-container">
+						<div class="tarea-item urgente">
+							<div class="tarea-subject">Matemáticas</div>
+							<div class="tarea-title">Ejercicios de Cálculo Integral</div>
+							<div class="tarea-fecha">Vence: 10 de Julio, 2025</div>
+							<div class="tarea-actions">
+								<button class="btn btn-primary btn-sm">Ver Detalles</button>
+								<button class="btn btn-success btn-sm">Entregar</button>
+							</div>
+						</div>
+						<div class="tarea-item media">
+							<div class="tarea-subject">Química</div>
+							<div class="tarea-title">Laboratorio de Reacciones Químicas</div>
+							<div class="tarea-fecha">Vence: 12 de Julio, 2025</div>
+							<div class="tarea-actions">
+								<button class="btn btn-primary btn-sm">Ver Detalles</button>
+								<button class="btn btn-success btn-sm">Entregar</button>
+							</div>
+						</div>
+						<div class="tarea-item normal">
+							<div class="tarea-subject">Física</div>
+							<div class="tarea-title">Problemas de Mecánica Cuántica</div>
+							<div class="tarea-fecha">Vence: 15 de Julio, 2025</div>
+							<div class="tarea-actions">
+								<button class="btn btn-primary btn-sm">Ver Detalles</button>
+								<button class="btn btn-success btn-sm">Entregar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Sección de Entregas Pendientes -->
+	<div id="entregas-pendientes" class="fh5co-bg-section">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Entregas Pendientes</h2>
+					<p>Gestiona tus trabajos y proyectos que están próximos a vencer.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="entregas-pendientes-container">
+						<div class="entrega-item urgente">
+							<div class="entrega-subject">Biología</div>
+							<div class="entrega-title">Proyecto Final: Ecosistemas Colombianos</div>
+							<div class="entrega-fecha">Vence: 9 de Julio, 2025</div>
+							<div class="entrega-progress">
+								<div class="progress">
+									<div class="progress-bar" style="width: 75%">75%</div>
+								</div>
+							</div>
+							<div class="entrega-actions">
+								<button class="btn btn-warning btn-sm">Continuar</button>
+								<button class="btn btn-success btn-sm">Entregar</button>
+							</div>
+						</div>
+						<div class="entrega-item media">
+							<div class="entrega-subject">Lengua</div>
+							<div class="entrega-title">Ensayo Argumentativo</div>
+							<div class="entrega-fecha">Vence: 14 de Julio, 2025</div>
+							<div class="entrega-progress">
+								<div class="progress">
+									<div class="progress-bar" style="width: 40%">40%</div>
+								</div>
+							</div>
+							<div class="entrega-actions">
+								<button class="btn btn-warning btn-sm">Continuar</button>
+								<button class="btn btn-success btn-sm">Entregar</button>
+							</div>
+						</div>
+						<div class="entrega-item normal">
+							<div class="entrega-subject">Estadística</div>
+							<div class="entrega-title">Análisis de Datos Estadísticos</div>
+							<div class="entrega-fecha">Vence: 20 de Julio, 2025</div>
+							<div class="entrega-progress">
+								<div class="progress">
+									<div class="progress-bar" style="width: 20%">20%</div>
+								</div>
+							</div>
+							<div class="entrega-actions">
+								<button class="btn btn-warning btn-sm">Continuar</button>
+								<button class="btn btn-success btn-sm">Entregar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	<div id="fh5co-started" class="curso-started" style="background-image:url(images/img_bg_2.jpg);">
 		<div class="overlay"></div>
@@ -588,24 +696,82 @@
 	<!-- Inicio del pie de página -->
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
-			<div class="row copyright">
+			<div class="row row-pb-md">
+				<div class="col-md-3 fh5co-widget">
+					<h4>About Learning</h4>
+					<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<h4>Learning</h4>
+					<ul class="fh5co-footer-links">
+						<li><a href="#">Cursos</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Contacto</a></li>
+						<li><a href="#">Términos y condiciones</a></li>
+						<li><a href="#">Meetups</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<h4>Learn &amp; Grow</h4>
+					<ul class="fh5co-footer-links">
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Privacy</a></li>
+						<li><a href="#">Testimonials</a></li>
+						<li><a href="#">Handbook</a></li>
+						<li><a href="#">Held Desk</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<h4>Engage us</h4>
+					<ul class="fh5co-footer-links">
+						<li><a href="#">Marketing</a></li>
+						<li><a href="#">Visual Assistant</a></li>
+						<li><a href="#">System Analysis</a></li>
+						<li><a href="#">Advertise</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<h4>Legal</h4>
+					<ul class="fh5co-footer-links">
+						<li><a href="#">Find Designers</a></li>
+						<li><a href="#">Find Developers</a></li>
+						<li><a href="#">Teams</a></li>
+						<li><a href="#">Advertise</a></li>
+						<li><a href="#">API</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Barra de créditos que se extiende completamente de izquierda a derecha -->
+		<div class="row copyright full-width-credit-bar" style="background-color: #f5f5f5; padding: 30px 0; font-family: 'Segoe UI', sans-serif; margin: 0;">
+			<div class="container">
 				<div class="col-md-12 text-center">
-					<p>
-						<small class="block"> 2025 Plataforma Comfainteracciones. Todos los derechos reservados - 5748880 extensión 2001.</small> 
-						<small class="block">Diseñado por<a href="comfainteracciones" target="_blank">Comfainteracciones</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
+					<p style="margin-bottom: 8px; font-size: 14px; color: #555;">
+						&copy; 2025 Plataforma Comfainteracciones. Todos los derechos reservados - 5748880 extensión 2001.
 					</p>
-					<p>
-						<ul class="fh5co-social-icons">
+					<p style="margin-bottom: 15px; font-size: 14px; color: #666;">
+						Diseñado con dedicación por estudiantes de la promoción 2025
+					</p>
+					<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; color: #f89c1c; font-size: 15px; margin-bottom: 20px;">
+						<span>Maria Valentina Ibarra Gómez</span>
+						<span>Herlin Santiago Sanabria Camargo</span>
+						<span>Juan Sebastian Chacón Castro</span>
+					</div>
+					<div style="margin-top: 15px;">
+						<ul class="fh5co-social-icons" style="margin: 0; padding: 0;">
 							<li><a href="#"><i class="icon-twitter"></i></a></li>
 							<li><a href="#"><i class="icon-facebook"></i></a></li>
 							<li><a href="#"><i class="icon-linkedin"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
 						</ul>
-					</p>
+					</div>
 				</div>
 			</div>
-
-		</div>
+		</div> <!-- Cierre de .row copyright -->
 	</footer>
 	</div>
 

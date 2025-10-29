@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Demo - Nuevas Funcionalidades | Comfainteracciones</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Demostración de las nuevas funcionalidades del Portal Estudiantil" />
+	<meta name="keywords" content="demo, funcionalidades, portal, estudiantil" />
+	<meta name="author" content="Comfainteracciones" />
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- Nuevas funcionalidades -->
+	<link rel="stylesheet" href="css/notifications.css">
+	<link rel="stylesheet" href="css/search.css">
+	<link rel="stylesheet" href="css/breadcrumbs.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-right">
+						<p class="num">Demo Funcionalidades</p>
+						<ul class="fh5co-social">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							<li><a href="#"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-1">
+						<div id="fh5co-logo"><a href="index.html">Comfainteracciones<span>.</span></a></div>
+					</div>
+					<div class="col-xs-11 text-right menu-1">
+						<ul>
+							<li><a href="index.html">Inicio</a></li>
+							<li><a href="cursos.html">Cursos</a></li>
+							<li><a href="calificaciones.html">Calificaciones</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="contacto.html">Contacto</a></li>
+							<li class="active"><a href="demo-features.html">Demo</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/img_bg_1.jpg);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>Demo de Funcionalidades</h1>
+							<h2>Prueba todas las nuevas características implementadas en el Portal Estudiantil</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div id="fh5co-demo-features">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center animate-box">
+					<h2>🚀 Nuevas Funcionalidades Implementadas</h2>
+					<p>Explora y prueba cada una de las mejoras del portal</p>
+				</div>
+			</div>
+
+			<!-- Sistema de Notificaciones -->
+			<div class="row feature-section">
+				<div class="col-md-6 animate-box">
+					<div class="feature-card">
+						<div class="feature-icon">
+							<i class="icon-bell"></i>
+						</div>
+						<h3>Sistema de Notificaciones</h3>
+						<p>Recibe notificaciones en tiempo real sobre tareas, calificaciones y eventos importantes.</p>
+						<div class="feature-actions">
+							<button class="btn btn-primary" onclick="testNotifications()">
+								<i class="icon-bell"></i> Probar Notificaciones
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 animate-box">
+					<div class="feature-info">
+						<h4>Características:</h4>
+						<ul>
+							<li>Notificaciones push en tiempo real</li>
+							<li>Diferentes tipos: éxito, advertencia, error, info</li>
+							<li>Prioridades configurables</li>
+							<li>Historial de notificaciones</li>
+							<li>Diseño responsive y accesible</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Sistema de Búsqueda Global -->
+			<div class="row feature-section">
+				<div class="col-md-6 animate-box">
+					<div class="feature-info">
+						<h4>Características:</h4>
+						<ul>
+							<li>Búsqueda en todo el portal</li>
+							<li>Resultados en tiempo real</li>
+							<li>Historial de búsquedas</li>
+							<li>Sugerencias inteligentes</li>
+							<li>Filtros por categoría y tipo</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6 animate-box">
+					<div class="feature-card">
+						<div class="feature-icon">
+							<i class="icon-search"></i>
+						</div>
+						<h3>Búsqueda Global</h3>
+						<p>Encuentra rápidamente cualquier contenido, curso o información en el portal.</p>
+						<div class="feature-actions">
+							<button class="btn btn-primary" onclick="testSearch()">
+								<i class="icon-search"></i> Probar Búsqueda
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Sistema de Breadcrumbs -->
+			<div class="row feature-section">
+				<div class="col-md-6 animate-box">
+					<div class="feature-card">
+						<div class="feature-icon">
+							<i class="icon-location"></i>
+						</div>
+						<h3>Breadcrumbs Inteligentes</h3>
+						<p>Navega fácilmente por el portal con indicadores de ubicación claros y funcionales.</p>
+						<div class="feature-actions">
+							<button class="btn btn-primary" onclick="testBreadcrumbs()">
+								<i class="icon-location"></i> Probar Breadcrumbs
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 animate-box">
+					<div class="feature-info">
+						<h4>Características:</h4>
+						<ul>
+							<li>Navegación jerárquica clara</li>
+							<li>Actualización automática</li>
+							<li>Iconos descriptivos</li>
+							<li>Diseño responsive</li>
+							<li>Accesibilidad mejorada</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Pruebas Interactivas -->
+			<div class="row feature-section">
+				<div class="col-md-12 animate-box">
+					<div class="interactive-demo">
+						<h3>🎯 Pruebas Interactivas</h3>
+						<div class="demo-controls">
+							<div class="row">
+								<div class="col-md-4">
+									<button class="btn btn-success btn-block" onclick="showSuccessNotification()">
+										<i class="icon-check"></i> Notificación de Éxito
+									</button>
+								</div>
+								<div class="col-md-4">
+									<button class="btn btn-warning btn-block" onclick="showWarningNotification()">
+										<i class="icon-warning"></i> Notificación de Advertencia
+									</button>
+								</div>
+								<div class="col-md-4">
+									<button class="btn btn-danger btn-block" onclick="showErrorNotification()">
+										<i class="icon-close"></i> Notificación de Error
+									</button>
+								</div>
+							</div>
+							<div class="row" style="margin-top: 20px;">
+								<div class="col-md-6">
+									<button class="btn btn-info btn-block" onclick="showInfoNotification()">
+										<i class="icon-info"></i> Notificación Informativa
+									</button>
+								</div>
+								<div class="col-md-6">
+									<button class="btn btn-primary btn-block" onclick="openGlobalSearch()">
+										<i class="icon-search"></i> Abrir Búsqueda Global
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Información Técnica -->
+			<div class="row feature-section">
+				<div class="col-md-12 animate-box">
+					<div class="technical-info">
+						<h3>🔧 Información Técnica</h3>
+						<div class="row">
+							<div class="col-md-6">
+								<h4>Archivos Implementados:</h4>
+								<ul>
+									<li><code>js/notifications.js</code> - Sistema de notificaciones</li>
+									<li><code>js/search.js</code> - Búsqueda global</li>
+									<li><code>js/breadcrumbs.js</code> - Navegación breadcrumbs</li>
+									<li><code>css/notifications.css</code> - Estilos de notificaciones</li>
+									<li><code>css/search.css</code> - Estilos de búsqueda</li>
+									<li><code>css/breadcrumbs.css</code> - Estilos de breadcrumbs</li>
+								</ul>
+							</div>
+							<div class="col-md-6">
+								<h4>Características Técnicas:</h4>
+								<ul>
+									<li>Vanilla JavaScript (sin dependencias)</li>
+									<li>CSS3 con animaciones avanzadas</li>
+									<li>Diseño responsive y mobile-first</li>
+									<li>Accesibilidad WCAG 2.1</li>
+									<li>Compatibilidad con navegadores modernos</li>
+									<li>Optimización de rendimiento</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2025 Portal Comfainteracciones. Demo de Funcionalidades.</small> 
+						<small class="block">Todas las funcionalidades están implementadas y listas para usar.</small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+	
+	<!-- Nuevas funcionalidades -->
+	<script src="js/notifications.js"></script>
+	<script src="js/search.js"></script>
+	<script src="js/breadcrumbs.js"></script>
+
+	<!-- Scripts de demostración -->
+	<script>
+		function testNotifications() {
+			notificationSystem.success('¡Funcionalidad activa!', 'El sistema de notificaciones está funcionando correctamente');
+			setTimeout(() => {
+				notificationSystem.info('Información', 'Puedes probar diferentes tipos de notificaciones');
+			}, 1000);
+		}
+
+		function testSearch() {
+			globalSearch.toggleSearch();
+		}
+
+		function testBreadcrumbs() {
+			// Simular navegación a una subpágina
+			window.location.hash = '#demo';
+			// Agregar breadcrumb personalizado
+			addBreadcrumb('Demo Funcionalidades', 'demo-features.html#demo', 'icon-flask');
+		}
+
+		function showSuccessNotification() {
+			notificationSystem.success('¡Éxito!', 'Esta es una notificación de éxito del sistema');
+		}
+
+		function showWarningNotification() {
+			notificationSystem.warning('Advertencia', 'Esta es una notificación de advertencia del sistema');
+		}
+
+		function showErrorNotification() {
+			notificationSystem.error('Error', 'Esta es una notificación de error del sistema');
+		}
+
+		function showInfoNotification() {
+			notificationSystem.info('Información', 'Esta es una notificación informativa del sistema');
+		}
+
+		function openGlobalSearch() {
+			globalSearch.toggleSearch();
+		}
+
+		// Mostrar notificación de bienvenida al cargar la página
+		document.addEventListener('DOMContentLoaded', function() {
+			setTimeout(() => {
+				notificationSystem.info('¡Bienvenido!', 'Esta es la página de demostración de funcionalidades');
+			}, 1000);
+		});
+	</script>
+
+	</body>
+</html>

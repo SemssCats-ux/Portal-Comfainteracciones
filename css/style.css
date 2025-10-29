@@ -3123,6 +3123,19 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-bottom: 0;
 }
 
+/* Mejoras específicas para la imagen de fondo en calificaciones */
+.page-calificaciones #fh5co-header {
+  background-size: cover;
+  background-position: center -20%;
+  background-attachment: fixed;
+}
+
+.page-calificaciones #fh5co-started {
+  background-size: cover;
+  background-position: center -20%;
+  background-attachment: fixed;
+}
+
 /* Media queries para responsividad */
 @media screen and (max-width: 768px) {
   .page-calificaciones .progress-timeline:before {
@@ -3132,6 +3145,17 @@ h1, h2, h3, h4, h5, h6, figure {
   
   .page-calificaciones .period-card {
     margin-bottom: 30px;
+  }
+  
+  /* Ajustes para imagen de fondo en móviles */
+  .page-calificaciones #fh5co-header {
+    background-attachment: scroll;
+    background-position: center -20%;
+  }
+  
+  .page-calificaciones #fh5co-started {
+    background-attachment: scroll;
+    background-position: center -20%;
   }
 }
 
@@ -3627,4 +3651,248 @@ h1, h2, h3, h4, h5, h6, figure {
     margin-top: -18% !important;
     transform: none !important;
   }
+}
+
+/* Estilos para los botones de acceso rápido en la sección de cursos */
+.cursos-quick-actions {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.cursos-quick-actions .btn {
+	margin: 0 10px;
+	padding: 15px 30px;
+	border-radius: 30px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cursos-quick-actions .btn-learn {
+	background: #f39c12;
+	border: 2px solid #f39c12;
+	color: #fff;
+}
+
+.cursos-quick-actions .btn-learn:hover,
+.cursos-quick-actions .btn-learn:focus {
+	background: #e67e22;
+	border-color: #e67e22;
+	color: #fff;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.cursos-quick-actions .btn-video {
+	background: rgba(255, 255, 255, 0.1);
+	border: 2px solid rgba(255, 255, 255, 0.8);
+	color: #fff;
+	backdrop-filter: blur(5px);
+}
+
+.cursos-quick-actions .btn-video:hover,
+.cursos-quick-actions .btn-video:focus {
+	background: rgba(255, 255, 255, 0.2);
+	border-color: #fff;
+	color: #fff;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.cursos-quick-actions .btn-video i {
+	margin-right: 8px;
+}
+
+/* Responsive para los botones */
+@media screen and (max-width: 768px) {
+	.cursos-quick-actions .btn {
+		display: block;
+		margin: 10px auto;
+		width: 80%;
+		text-align: center;
+	}
+}
+
+/* Estilos para las secciones de Tareas y Entregas Pendientes */
+.tareas-pendientes-container,
+.entregas-pendientes-container {
+	margin-top: 30px;
+}
+
+.tarea-item,
+.entrega-item {
+	background: #fff;
+	border-radius: 8px;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+	border-left: 4px solid #ddd;
+	transition: all 0.3s ease;
+}
+
+.tarea-item:hover,
+.entrega-item:hover {
+	box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+	transform: translateY(-2px);
+}
+
+.tarea-item.urgente,
+.entrega-item.urgente {
+	border-left-color: #e74c3c;
+}
+
+.tarea-item.media,
+.entrega-item.media {
+	border-left-color: #f39c12;
+}
+
+.tarea-item.normal,
+.entrega-item.normal {
+	border-left-color: #27ae60;
+}
+
+.tarea-subject,
+.entrega-subject {
+	font-size: 12px;
+	font-weight: 600;
+	color: #7f8c8d;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 5px;
+}
+
+.tarea-title,
+.entrega-title {
+	font-size: 18px;
+	font-weight: 600;
+	color: #2c3e50;
+	margin-bottom: 10px;
+}
+
+.tarea-fecha,
+.entrega-fecha {
+	font-size: 14px;
+	color: #7f8c8d;
+	margin-bottom: 15px;
+}
+
+.tarea-actions,
+.entrega-actions {
+	display: flex;
+	gap: 10px;
+	justify-content: flex-end;
+}
+
+.entrega-progress {
+	margin-bottom: 15px;
+}
+
+.entrega-progress .progress {
+	height: 8px;
+	background-color: #ecf0f1;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.entrega-progress .progress-bar {
+	height: 100%;
+	background-color: #3498db;
+	border-radius: 4px;
+	transition: width 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 11px;
+	font-weight: 600;
+	color: #fff;
+}
+
+/* Estilos para la barra de créditos de ancho completo en calificaciones */
+.full-width-credit-bar {
+  width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
+
+/* Asegurar que el footer no tenga overflow horizontal */
+#fh5co-footer {
+  overflow-x: hidden;
+}
+
+/* Estilos específicos para la página de calificaciones */
+.page-calificaciones .full-width-credit-bar {
+  margin-top: 0;
+  border-top: 1px solid #e6e6e6;
+}
+
+/* Responsive para la barra de créditos */
+@media screen and (max-width: 768px) {
+  .full-width-credit-bar {
+    padding: 20px 0 !important;
+  }
+  
+  .full-width-credit-bar .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .full-width-credit-bar div[style*="display: flex"] {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+}
+
+/* Estilos para el mapa de Google Maps */
+.fh5co-map {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  margin: 40px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Estilos para la ventana de información del mapa */
+.gm-style-iw {
+  border-radius: 8px !important;
+}
+
+.gm-style-iw-d {
+  overflow: hidden !important;
+}
+
+/* Responsive para el mapa */
+@media screen and (max-width: 768px) {
+  .fh5co-map {
+    height: 300px;
+    margin: 20px 0;
+  }
+}
+
+/* Estilos para el mensaje de error del mapa */
+.map-error-message {
+  background-color: #f5f5f5;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  color: #666;
+}
+
+.map-error-message h4 {
+  color: #f89c1c;
+  margin-bottom: 15px;
 }
